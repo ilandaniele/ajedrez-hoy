@@ -7,8 +7,9 @@ const Header = () => {
 
   const menuItems = [
     { name: 'Inicio', sectionId: 'presentation' },
-    { name: 'Servicios', sectionId: 'services' },
     { name: '¿Por qué elegirnos?', sectionId: 'whyus' },
+    { name: 'Cursos', sectionId: 'courses' },
+    { name: 'Acerca de', sectionId: 'aboutus' }, // Nueva sección agregada
     { name: 'Preguntas Frecuentes', sectionId: 'faqs' },
     { name: 'Contacto', sectionId: 'contact' },
   ];

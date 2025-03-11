@@ -5,32 +5,36 @@ import FAQItem from './FAQItem';
 
 const faqs = [
   {
-    question: '¿Qué servicios ofrece Ascend Digital?',
-    answer: 'Nos especializamos en diseño y optimización de páginas web, campañas de marketing en redes sociales, gestión de Google Ads y SEO, y análisis de resultados para inmobiliarias.',
+    question: '¿Qué servicios ofrece Ajedrez HOY?',
+    answer: 'Ajedrez HOY, dirigida por el Maestro Internacional Guillermo José Llanos, ofrece clases personalizadas de ajedrez para todos los niveles y edades, cursos grupales como el Curso de Ajedrez Formativo (CAF) y talleres especializados en áreas como el cálculo y la estrategia.',
   },
   {
-    question: '¿Cómo garantizan que sus estrategias sean efectivas?',
-    answer: 'Nos enfocamos en generar consultas calificadas, optimizando la visibilidad online y proporcionando reportes claros para medir el impacto de nuestras estrategias.',
+    question: '¿Quién es Guillermo José Llanos?',
+    answer: 'Guillermo José Llanos es un Maestro Internacional y FIDE Trainer con más de 50 años de experiencia en la enseñanza y entrenamiento de ajedrez. Ha sido pionero en la enseñanza de ajedrez por Internet durante los últimos 20 años y dirige la academia Ajedrez HOY.',
   },
   {
-    question: '¿Qué diferencia a Ascend Digital de otras agencias?',
-    answer: 'No solo brindamos servicios, sino soluciones personalizadas con resultados medibles. Nuestro enfoque está en el sector inmobiliario, entendiendo sus desafíos específicos.',
+    question: '¿Qué es el Curso de Ajedrez Formativo (CAF)?',
+    answer: 'El CAF es un programa estructurado en niveles que abarca desde finales y táctica hasta estrategia e historia del ajedrez, diseñado para mejorar las habilidades de los estudiantes de manera progresiva.',
   },
   {
-    question: '¿Pueden ayudarme si no tengo experiencia previa en marketing digital?',
-    answer: '¡Por supuesto! Diseñamos estrategias adaptadas a tus necesidades y te acompañamos en todo el proceso para que logres tus objetivos.',
+    question: '¿Cómo puedo inscribirme en las clases o cursos?',
+    answer: 'Puedes inscribirte contactando directamente al Maestro Guillermo José Llanos a través de su correo electrónico guillermollanos@gmail.com o por WhatsApp al +54 911 6056 1605.',
   },
   {
-    question: '¿Qué tan rápido veré resultados?',
-    answer: 'Los resultados pueden variar según los servicios contratados, pero generalmente, nuestras campañas comienzan a generar consultas en pocas semanas.',
+    question: '¿Las clases son presenciales o en línea?',
+    answer: 'Ajedrez HOY ofrece clases tanto presenciales como en línea, adaptándose a las necesidades y ubicaciones de los estudiantes.',
   },
   {
-    question: '¿Es necesario tener una página web para trabajar con ustedes?',
-    answer: 'No es indispensable, pero recomendamos contar con una página optimizada para maximizar los resultados. Si no tienes una, ¡podemos crearla para ti!',
+    question: '¿Cuál es el costo de las clases y cursos?',
+    answer: 'El costo puede variar según el tipo de clase o curso. Se recomienda contactar directamente a Guillermo José Llanos para obtener información actualizada sobre precios y modalidades de pago.',
   },
   {
-    question: '¿Cuánto cuesta contratar sus servicios?',
-    answer: 'Ofrecemos planes adaptados a diferentes necesidades y presupuestos. Contáctanos para agendar una consulta gratuita y recibir una propuesta personalizada.',
+    question: '¿Ajedrez HOY organiza torneos o eventos?',
+    answer: 'Sí, Ajedrez HOY organiza y participa en diversos torneos y eventos relacionados con el ajedrez. Puedes obtener más información visitando el blog oficial de la academia.',
+  },
+  {
+    question: '¿Ofrecen material de estudio adicional?',
+    answer: 'Sí, además de las clases, Ajedrez HOY proporciona material de estudio complementario, incluyendo libros y recursos en línea para apoyar el aprendizaje de los estudiantes.',
   },
 ];
 
@@ -62,18 +66,6 @@ const FAQs = () => {
       animate={controls}
       variants={variants}
     >
-      {/* <div className="absolute inset-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          className="w-full h-full object-cover"
-        >
-          <source src={require('../assets/vecteezy_pink-color-digital-particle-wave-in-cyberspace-abstract_27681863-2.mp4')} type="video/mp4" />
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-      </div> */}
       <div className="relative container mx-auto px-4 md:px-8 lg:px-16">
         <motion.h2
           className="text-4xl font-bold text-center mb-8 text-white"

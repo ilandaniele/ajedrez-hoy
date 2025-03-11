@@ -15,34 +15,34 @@ const itemVariants = {
 const WhyUs = () => {
   const services = [
     {
-      title: "🚀 Soluciones Adaptadas",
+      title: "🎓 Experiencia Comprobada",
       content:
-        "Nos adaptamos a cualquier industria, entendiendo tus desafíos y objetivos específicos."
+        "Con más de 50 años de docencia en ajedrez, el Maestro Internacional Guillermo Llanos ha formado a miles de estudiantes de todas las edades y niveles. Su trayectoria es testimonio de dedicación y excelencia en la enseñanza."
     },
     {
-      title: "🎨 Creatividad + Estrategia",
+      title: "🌐 Pioneros en Enseñanza Online",
       content:
-        "Combinamos ideas innovadoras con análisis estratégico y herramientas digitales avanzadas."
+        "Desde el año 2000, Ajedrez HOY ha sido líder en la enseñanza de ajedrez por internet, adaptándose a las necesidades de los alumnos y aprovechando la tecnología."
     },
     {
-      title: "📈 Resultados Comprobables",
+      title: "🛠️ Programas Personalizados",
       content:
-        "Más visibilidad online, consultas calificadas y estrategias pensadas para maximizar tu ROI."
+        "Cada estudiante recibe un diagnóstico inicial para identificar sus fortalezas y áreas de mejora, permitiendo diseñar un plan de trabajo a medida."
     },
     {
-      title: "🤝 Acompañamiento Real",
+      title: "📚 Recursos Exclusivos",
       content:
-        "No te dejamos solo. Ajustamos y optimizamos constantemente para que sigas creciendo."
+        "Ofrecemos materiales de estudio propios, como el Curso de Ajedrez Formativo (CAF), diseñado para potenciar el desarrollo ajedrecístico."
     },
     {
-      title: "❌ Sin Paquetes Prefabricados",
+      title: "🏆 Resultados Tangibles",
       content:
-        "A diferencia de otras agencias que ofrecen soluciones genéricas, nosotros diseñamos estrategias personalizadas que se ajustan a tu negocio y tus necesidades reales."
+        "Nuestros estudiantes han logrado mejoras significativas en su desempeño, reflejando la eficacia de nuestros métodos."
     },
     {
-      title: "⚡ Sin Humo, Solo Transparencia",
+      title: "🤝 Compromiso y Acompañamiento",
       content:
-        "No te llenamos de tecnicismos ni promesas vacías. Sabés qué hacemos y por qué lo hacemos."
+        "Nos comprometemos con el progreso de cada alumno, brindando seguimiento continuo y estrategias adaptadas a sus necesidades."
     }
   ];
 
@@ -59,20 +59,20 @@ const WhyUs = () => {
         ¿Por qué elegir <span className="text-blue-500">Ajedrez HOY</span>?
       </h2>
       <p className="text-center text-lg max-w-3xl mx-auto mb-16">
-        Porque no hacemos marketing digital genérico: creamos estrategias que realmente funcionan para tu negocio.
+        Porque no solo enseñamos ajedrez, sino que también cultivamos habilidades para la vida, adaptándonos a las necesidades individuales de cada estudiante.
       </p>
-      <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto" variants={variants}>
+      <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={variants}>
         {services.map((service, index) => (
           <motion.div
             key={index}
             variants={itemVariants}
             className="group perspective"
           >
-            <div className="relative w-full h-48 [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
-              <div className="absolute inset-0 flex items-center justify-center text-center text-2xl font-bold p-6 bg-gray-900 rounded-lg shadow-lg [backface-visibility:hidden]">
+            <div className="relative w-full h-56 [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
+              <div className="absolute inset-0 flex items-center justify-center text-center text-2xl font-bold p-8 bg-gray-900 rounded-lg shadow-lg [backface-visibility:hidden]">
                 {service.title}
               </div>
-              <div className="absolute inset-0 flex items-center justify-center text-center text-lg bg-gray-800 p-6 rounded-lg shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div className="absolute inset-0 flex items-center justify-center text-center text-lg bg-gray-800 p-8 rounded-lg shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 {service.content}
               </div>
             </div>

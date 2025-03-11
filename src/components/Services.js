@@ -87,46 +87,46 @@ const Services = () => {
   const getOffsets = () => {
     if (windowWidth < 480) {
       return [
-        { text: "Diseño", direction: "left", offset: 200 },
-        { text: "Branding", direction: "right", offset: -300 },
-        { text: "Redes Sociales", direction: "left", offset: 400 },
-        { text: "Marketing", direction: "right", offset: -600 },
+        { text: "Ajedrez", direction: "left", offset: 200 },
+        { text: "Talleres", direction: "right", offset: -300 },
+        { text: "Cursos", direction: "left", offset: 400 },
+        { text: "Profesionalismo", direction: "right", offset: -600 },
         { text: "Anuncios", direction: "left", offset: 600 },
         { text: "Estrategia", direction: "right", offset: -800 },
       ];
     } else if (windowWidth < 640) {
       return [
-        { text: "Diseño", direction: "left", offset: 0 },
-        { text: "Branding", direction: "right", offset: -100 },
-        { text: "Redes Sociales", direction: "left", offset: 200 },
-        { text: "Marketing", direction: "right", offset: -300 },
+        { text: "Ajedrez", direction: "left", offset: 0 },
+        { text: "Talleres", direction: "right", offset: -100 },
+        { text: "Cursos", direction: "left", offset: 200 },
+        { text: "Profesionalismo", direction: "right", offset: -300 },
         { text: "Anuncios", direction: "left", offset: 400 },
         { text: "Estrategia", direction: "right", offset: -500 },
       ];
     } else if (windowWidth < 1024) {
       return [
-        { text: "Diseño", direction: "left", offset: 0 },
-        { text: "Branding", direction: "right", offset: -200 },
-        { text: "Redes Sociales", direction: "left", offset: 400 },
-        { text: "Marketing", direction: "right", offset: -500 },
+        { text: "Ajedrez", direction: "left", offset: 0 },
+        { text: "Talleres", direction: "right", offset: -200 },
+        { text: "Cursos", direction: "left", offset: 400 },
+        { text: "Profesionalismo", direction: "right", offset: -500 },
         { text: "Anuncios", direction: "left", offset: 700 },
         { text: "Estrategia", direction: "right", offset: -800 },
       ];
     } else if (windowWidth < 1900) {
       return [
-        { text: "Diseño", direction: "left", offset: 0 },
-        { text: "Branding", direction: "right", offset: -200 },
-        { text: "Redes Sociales", direction: "left", offset: 400 },
-        { text: "Marketing", direction: "right", offset: -500 },
+        { text: "Ajedrez", direction: "left", offset: 0 },
+        { text: "Talleres", direction: "right", offset: -200 },
+        { text: "Cursos", direction: "left", offset: 400 },
+        { text: "Profesionalismo", direction: "right", offset: -500 },
         { text: "Anuncios", direction: "left", offset: 700 },
         { text: "Estrategia", direction: "right", offset: -800 },
       ];
     } else {
       return [
-        { text: "Diseño", direction: "left", offset: 400 },
-        { text: "Branding", direction: "right", offset: -550 },
-        { text: "Redes Sociales", direction: "left", offset: 750 },
-        { text: "Marketing", direction: "right", offset: -950 },
+        { text: "Ajedrez", direction: "left", offset: 400 },
+        { text: "Talleres", direction: "right", offset: -550 },
+        { text: "Cursos", direction: "left", offset: 750 },
+        { text: "Profesionalismo", direction: "right", offset: -950 },
         { text: "Anuncios", direction: "left", offset: 1150 },
         { text: "Estrategia", direction: "right", offset: -1300 },
       ];
