@@ -55,7 +55,7 @@ const WhyUs = () => {
       variants={variants}
       className="bg-black text-white py-20 px-6"
     >
-      <h2 className="text-6xl font-bold text-center mb-12 uppercase">
+      <h2 className="text-6xl font-bold text-center mb-12">
         ¿Por qué elegir <span className="text-blue-500">Ajedrez HOY</span>?
       </h2>
       <p className="text-center text-lg max-w-3xl mx-auto mb-16">

@@ -91,8 +91,8 @@ const Services = () => {
         { text: "Talleres", direction: "right", offset: -300 },
         { text: "Cursos", direction: "left", offset: 400 },
         { text: "Profesionalismo", direction: "right", offset: -600 },
-        { text: "Anuncios", direction: "left", offset: 600 },
-        { text: "Estrategia", direction: "right", offset: -800 },
+        { text: "Enseñanza", direction: "left", offset: 600 },
+        { text: "Competencia", direction: "right", offset: -800 },
       ];
     } else if (windowWidth < 640) {
       return [
@@ -100,8 +100,8 @@ const Services = () => {
         { text: "Talleres", direction: "right", offset: -100 },
         { text: "Cursos", direction: "left", offset: 200 },
         { text: "Profesionalismo", direction: "right", offset: -300 },
-        { text: "Anuncios", direction: "left", offset: 400 },
-        { text: "Estrategia", direction: "right", offset: -500 },
+        { text: "Enseñanza", direction: "left", offset: 400 },
+        { text: "Competencia", direction: "right", offset: -500 },
       ];
     } else if (windowWidth < 1024) {
       return [
@@ -109,8 +109,8 @@ const Services = () => {
         { text: "Talleres", direction: "right", offset: -200 },
         { text: "Cursos", direction: "left", offset: 400 },
         { text: "Profesionalismo", direction: "right", offset: -500 },
-        { text: "Anuncios", direction: "left", offset: 700 },
-        { text: "Estrategia", direction: "right", offset: -800 },
+        { text: "Enseñanza", direction: "left", offset: 700 },
+        { text: "Competencia", direction: "right", offset: -800 },
       ];
     } else if (windowWidth < 1900) {
       return [
@@ -118,8 +118,8 @@ const Services = () => {
         { text: "Talleres", direction: "right", offset: -200 },
         { text: "Cursos", direction: "left", offset: 400 },
         { text: "Profesionalismo", direction: "right", offset: -500 },
-        { text: "Anuncios", direction: "left", offset: 700 },
-        { text: "Estrategia", direction: "right", offset: -800 },
+        { text: "Enseñanza", direction: "left", offset: 700 },
+        { text: "Competencia", direction: "right", offset: -800 },
       ];
     } else {
       return [
@@ -127,8 +127,8 @@ const Services = () => {
         { text: "Talleres", direction: "right", offset: -550 },
         { text: "Cursos", direction: "left", offset: 750 },
         { text: "Profesionalismo", direction: "right", offset: -950 },
-        { text: "Anuncios", direction: "left", offset: 1150 },
-        { text: "Estrategia", direction: "right", offset: -1300 },
+        { text: "Enseñanza", direction: "left", offset: 1150 },
+        { text: "Competencia", direction: "right", offset: -1300 },
       ];
     }
   };

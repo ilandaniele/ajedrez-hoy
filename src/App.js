@@ -22,7 +22,7 @@ function App() {
       <AboutUs />
       <FAQs />
       <ContactForm />
-      <Footer /> {/* issues at 620 */}
+      <Footer />
     </div>
   );
 }

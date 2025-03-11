@@ -55,8 +55,8 @@ const Presentation = () => {
           animate={controls}
           variants={variants}
         >
-          <h2 className="font-sans text-5xl md:text-8xl mb-4">AJEDREZ HOY</h2>
-          <p className="text-2xl md:text-4xl mb-8">Escuela de Ajedrez</p>
+          <h2 className="font-sans text-5xl md:text-8xl mb-4">Ajedrez HOY</h2>
+          <p className="text-2xl md:text-4xl mb-8">Academia de Ajedrez</p>
           {/* Botón de WhatsApp */}
           <a
             href="https://wa.me/5491160561605"
