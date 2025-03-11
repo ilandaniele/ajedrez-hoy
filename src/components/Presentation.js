@@ -37,7 +37,7 @@ const Presentation = () => {
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source
-            src={`${process.env.PUBLIC_URL}/videos/City1_high.mp4`} // Nueva ruta local que funciona en Vercel
+            src={`${process.env.PUBLIC_URL}/videos/City1_high.mp4`} // Ruta del video de fondo
             type="video/mp4"
           />
           Tu navegador no soporta la reproducción de videos.
@@ -55,8 +55,15 @@ const Presentation = () => {
           animate={controls}
           variants={variants}
         >
-          <h2 className="font-sans text-5xl md:text-8xl mb-4">Ajedrez HOY</h2>
+          {/* Logo aún más grande */}
+          <img
+            src={`${process.env.PUBLIC_URL}/images/logoCompleto.png`}
+            alt="Ajedrez HOY Logo"
+            className="w-[600px] md:w-[700px] mb-6" // Tamaño aumentado
+          />
+
           <p className="text-2xl md:text-4xl mb-8">Academia de Ajedrez</p>
+
           {/* Botón de WhatsApp */}
           <a
             href="https://wa.me/5491160561605"

@@ -55,7 +55,7 @@ const Header = () => {
           >
             <div className="h-16 w-auto overflow-hidden">
               <img
-                src={require('../../public/images/logo.png')}
+                src={require('../assets/logo.png')}
                 alt="Logo AjedrezHOY"
                 className="h-full w-full object-cover object-center"
               />
