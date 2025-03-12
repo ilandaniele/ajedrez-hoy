@@ -1,0 +1,4 @@
+Ver sección de noticias como crear:
+    capaz un backend para que el suba las noticias
+Ver que videos poner de contenido
+Proponer cambiar el logo
