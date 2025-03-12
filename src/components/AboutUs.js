@@ -68,15 +68,23 @@ const AboutUs = () => {
           </motion.h2>
 
           <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
-            Me llamo <strong>Guillermo José Llanos</strong> y me dedico profesionalmente al ajedrez. Desde hace tres años, siento una profunda afinidad por la Kábala. Dirijo mi academia, <strong>Ajedrez HOY</strong>, desde el año 2000. No adhiero a ninguna religión, dogma ni cuestión mística.
+            Me llamo <strong>Guillermo José Llanos</strong> y me dedico profesionalmente al ajedrez. Dirijo mi academia, <strong>Ajedrez HOY</strong>, desde el año 2000.
           </motion.p>
 
           <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
-            Tengo <strong>50 años de experiencia</strong> como profesor y entrenador de ajedrez, y soy pionero en la enseñanza por Internet desde hace más de 20 años. Comencé a dar clases a los <strong>13 años</strong> y en 2024 celebro medio siglo de docencia. He enseñado en colegios, clubes, federaciones y hasta en centros de rehabilitación y cárceles, adaptando mi enseñanza a todo tipo de alumnos.
+            Tengo <strong>50 años de experiencia</strong> como profesor y entrenador de ajedrez, y soy pionero en la enseñanza por Internet desde hace más de <strong>25 años</strong>. 
           </motion.p>
 
           <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
-            Sigo participando en torneos, ofreciendo cursos, escribiendo libros y estudiando. Mi pasión por el ajedrez sigue intacta. En el seminario <em>"El Universo del Ajedrez"</em>, cuando me preguntaron por mi mayor logro, respondí sin dudar: <strong>"Que me sigue gustando el ajedrez"</strong>.
+            Comencé a dar clases a los <strong>13 años</strong> y en 2024 celebro medio siglo de docencia. He enseñado en colegios, clubes, federaciones y hasta en centros de rehabilitación y cárceles, adaptando mi enseñanza a todo tipo de alumnos.
+          </motion.p>
+
+          <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
+            Sigo participando en torneos, ofreciendo cursos, escribiendo libros y estudiando. Mi pasión por el ajedrez sigue intacta. 
+          </motion.p>
+
+          <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
+            En el seminario <em>"El Universo del Ajedrez"</em>, cuando me preguntaron por mi mayor logro, respondí sin dudar: <strong>"Que me sigue gustando el ajedrez"</strong>.
           </motion.p>
         </motion.div>
 
