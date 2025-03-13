@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
@@ -29,12 +31,16 @@ const Courses = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
 
-  // Función para convertir \n en <br />
+  // Función para procesar HTML y saltos de línea
   const formatDescription = (text) => {
-    return text.split("\n").map((line, i) => (
+    // Dividir por saltos de línea
+    const lines = text.split("\n")
+
+    // Procesar cada línea y agregar saltos de línea entre ellas
+    return lines.map((line, i) => (
       <React.Fragment key={i}>
-        {line}
-        {i < text.split("\n").length - 1 && <br />}
+        <span dangerouslySetInnerHTML={{ __html: line }} />
+        {i < lines.length - 1 && <br />}
       </React.Fragment>
     ))
   }
@@ -43,36 +49,37 @@ const Courses = () => {
     {
       titulo: "Clases Personalizadas de Ajedrez",
       descripcion:
-        "Clases individuales adaptadas a todos los niveles y edades, impartidas por el Maestro Internacional y FIDE trainer Guillermo José Llanos y el destacado plantel de profesores de la Academia Ajedrez HOY.",
+        "Clases individuales adaptadas a todos los niveles y edades, impartidas por el <strong>Maestro Internacional y FIDE trainer Guillermo José Llanos</strong> y el destacado plantel de profesores de la Academia Ajedrez HOY.",
       enlace: "https://academiaajedrezhoy.blogspot.com/2020/10/clases-on-line-2041.html",
     },
     {
       titulo: "Análisis de tus partidas",
       descripcion:
-        "Es <strong>MUY IMPORTANTE ANALIZAR TUS PARTIDAS</strong>. Para hacerlo mejor la próxima vez. Trabajaremos:\n1) Teoría de las Aperturas.\n2) Finales teóricos.\n3) Mejorar tu juego en general",
+        "Es <strong>MUY IMPORTANTE ANALIZAR TUS PARTIDAS</strong>. Para hacerlo mejor la próxima vez. Trabajaremos:\n1) <strong>Teoría de las Aperturas</strong>.\n2) <strong>Finales teóricos</strong>.\n3) <strong>Mejorar tu juego</strong> en general",
       enlace:
         "https://academiaajedrezhoy.blogspot.com/search?updated-max=2025-03-08T07:53:00-03:00&max-results=13&start=4&by-date=false",
     },
     {
       titulo: "Taller de Cálculo de Ajedrez HOY",
-      descripcion: "Sesiones intensivas diseñadas para mejorar la capacidad de cálculo y análisis en las partidas.",
+      descripcion:
+        "Sesiones intensivas diseñadas para mejorar la <strong>capacidad de cálculo</strong> y análisis en las partidas.",
       enlace: "https://academiaajedrezhoy.blogspot.com/2025/03/entrena-calculo-durante-el-finde.html",
     },
     {
       titulo: "Curso de Ajedrez Formativo (CAF)",
       descripcion:
-        "Programa estructurado en cuatro niveles y 5 temas (finales, táctica, estrategia, historia y aperturas)",
+        "Programa estructurado en <strong>cuatro niveles</strong> y <strong>5 temas</strong> (finales, táctica, estrategia, historia y aperturas)",
       enlace: "https://academiaajedrezhoy.blogspot.com/2020/11/caf-curso-de-ajedrez-formativo-programa.html",
     },
     {
       titulo: "CAF5_AHM+: Curso de Ajedrez Formativo Nivel 5",
       descripcion:
-        "Aplicación del CAF en el programa de Alto Rendimiento de la FADA.\nAjedrez HOY Método + (plus)\nAvances desde el 2015 a la fecha.",
+        "Aplicación del CAF en el programa de <strong>Alto Rendimiento</strong> de la FADA.\n<strong>Ajedrez HOY Método + (plus)</strong>\nAvances desde el 2015 a la fecha.",
       enlace: "https://academiaajedrezhoy.blogspot.com/2025/03/caf5ahm-profesor-guillermo-llanos.html",
     },
     {
       titulo: "Estrategias Ganadoras para la Vida",
-      descripcion: "Programa de mejoramiento personal basado en el pensamiento del ajedrecista.",
+      descripcion: "Programa de <strong>mejoramiento personal</strong> basado en el pensamiento del ajedrecista.",
       enlace: "https://guillermollanos.blogspot.com/2025/02/mejora-tu-vida-hoyarriesgando-un-dolar.html",
     },
   ]
