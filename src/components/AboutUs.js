@@ -67,27 +67,54 @@ const AboutUs = () => {
             Acerca de Guillermo José Llanos
           </motion.h2>
 
-          <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
+          <motion.p className="mb-4 text-lg text-gray-300" variants={textVariants}>
             Me llamo <strong>Guillermo José Llanos</strong> y me dedico profesionalmente al ajedrez. Dirijo mi academia, <strong>Ajedrez HOY</strong>, desde el año 2000.
           </motion.p>
 
-          <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
+          <motion.p className="mb-4 text-lg text-gray-300" variants={textVariants}>
             Tengo <strong>50 años de experiencia</strong> como profesor y entrenador de ajedrez, y soy pionero en la enseñanza por Internet desde hace más de <strong>25 años</strong>. 
           </motion.p>
 
-          <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
+          <motion.p className="mb-4 text-lg text-gray-300" variants={textVariants}>
             Comencé a dar clases a los <strong>13 años</strong> y en 2024 celebro medio siglo de docencia. He enseñado en colegios, clubes, federaciones y hasta en centros de rehabilitación y cárceles, adaptando mi enseñanza a todo tipo de alumnos.
           </motion.p>
 
-          <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
-            Sigo participando en torneos, ofreciendo cursos, escribiendo libros y estudiando. Mi pasión por el ajedrez sigue intacta. 
+          <motion.p className="mb-4 text-lg text-gray-300" variants={textVariants}>
+            Sigo participando en torneos, ofreciendo cursos, escribiendo libros y estudiando. Mi pasión por el ajedrez sigue intacta.
           </motion.p>
 
-          <motion.p className="mb-4 text-lg text-gray-300" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={textVariants}>
+          <motion.p className="mb-4 text-lg text-gray-300" variants={textVariants}>
             En el seminario <em>"El Universo del Ajedrez"</em>, cuando me preguntaron por mi mayor logro, respondí sin dudar: <strong>"Que me sigue gustando el ajedrez"</strong>.
           </motion.p>
-        </motion.div>
 
+          {/* Proyectos actuales */}
+          <motion.div className="mt-8" variants={textVariants}>
+            <h3 className="text-3xl font-semibold mb-4 text-white">Proyectos Actuales</h3>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>
+                <strong>Expansión de ChessKid en Argentina:</strong> Colaborando con Ivette García Morales y su equipo para promover el ajedrez infantil en el país.
+              </li>
+              <li>
+                <strong>Desarrollo y crecimiento de Ajedrez HOY:</strong> Continuando con la formación de estudiantes de todos los niveles y edades.
+              </li>
+              <li>
+                <strong>Publicación de libros de ajedrez:</strong> Dejar un legado en formato de libros impresos y digitales con los conocimientos adquiridos.
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Logros destacados */}
+          <motion.div className="mt-8" variants={textVariants}>
+            <h3 className="text-3xl font-semibold mb-4 text-white">Logros Destacados</h3>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Embajador de ChessKid en Argentina.</li>
+              <li>Fundador y director de la Academia Internacional Ajedrez HOY.</li>
+              <li>Reconocido entrenador y coach de ajedrez con alumnos en todo el mundo.</li>
+              <li>Organizador de múltiples torneos nacionales e internacionales.</li>
+              <li>Autor de varios cursos y material educativo sobre ajedrez.</li>
+            </ul>
+          </motion.div>
+        </motion.div>
       </div>
     </motion.section>
   );
