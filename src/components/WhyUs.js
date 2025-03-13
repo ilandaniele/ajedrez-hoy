@@ -48,7 +48,7 @@ const WhyUs = () => {
 
   return (
     <motion.section
-      id="whyus"
+      id="whyUs"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -59,8 +59,15 @@ const WhyUs = () => {
         ¿Por qué elegir <span className="text-blue-500">Ajedrez HOY</span>?
       </h2>
       <p className="text-center text-lg max-w-3xl mx-auto mb-16">
-        Porque no solo enseñamos ajedrez, sino que también cultivamos habilidades para la vida, adaptándonos a las necesidades individuales de cada estudiante.
+        Desde las primeras clases empezarás a <b>pensar diferente</b> sobre el ajedrez y la vida. 
+        Con una <b>nueva perspectiva</b>, desarrollarás tu potencial al máximo dentro y fuera del tablero.  
+        Trabajaremos con un método <b>adaptado a tus necesidades</b> y basado en la <b>toma de consciencia</b> y la <b>creación de hábitos</b>.  
+        <br /><br />
+        Combinamos <b>estudio y entrenamiento</b> en un ritmo adecuado para cada alumno. Nuestro sistema, probado por <b>más de 25 años</b> y con miles de estudiantes de todas las edades, ha demostrado que <b>REALMENTE FUNCIONA</b>.  
+        <br /><br />
+        No sigas improvisando. Aprovechá <b>NUESTRA EXPERIENCIA</b>.
       </p>
+      
       <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={variants}>
         {services.map((service, index) => (
           <motion.div

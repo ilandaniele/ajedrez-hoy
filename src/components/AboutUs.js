@@ -26,7 +26,7 @@ const AboutUs = () => {
   return (
     <motion.section
       className="relative bg-black text-white py-16 min-h-screen flex items-center"
-      id="aboutus"
+      id="aboutUs"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}

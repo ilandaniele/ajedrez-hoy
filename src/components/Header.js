@@ -7,11 +7,12 @@ const Header = () => {
 
   const menuItems = [
     { name: 'Inicio', sectionId: 'presentation' },
-    { name: '¿Por qué elegirnos?', sectionId: 'whyus' },
+    { name: '¿Por qué elegirnos?', sectionId: 'whyUs' },
     { name: 'Cursos', sectionId: 'courses' },
-    { name: 'Acerca de', sectionId: 'aboutus' }, // Nueva sección agregada
+    { name: 'Acerca de', sectionId: 'aboutUs' },
     { name: 'Preguntas Frecuentes', sectionId: 'faqs' },
     { name: 'Contacto', sectionId: 'contact' },
+    { name: 'Blog', link: 'https://academiaajedrezhoy.blogspot.com/' }
   ];
 
   const scrollToSection = (id) => {
@@ -78,7 +79,13 @@ const Header = () => {
                   <motion.li
                     key={index}
                     className="hover:text-custom-pink cursor-pointer transition-colors duration-200 px-4 py-2 md:px-2 md:py-1"
-                    onClick={() => scrollToSection(item.sectionId)}
+                    onClick={() => {
+                      if (item.link) {
+                        window.open(item.link, '_blank'); // Abre en una nueva pestaña
+                      } else {
+                        scrollToSection(item.sectionId);
+                      }
+                    }}
                     variants={menuVariants}
                   >
                     {item.name}
