@@ -37,7 +37,7 @@ const Courses = () => {
     },
     {
       titulo: 'Análisis de tus partidas',
-      descripcion: ' Es MUY IMPORTANTE ANALIZAR TUS PARTIDAS. Para hacerlo mejor la próxima vez. Trabajaremos:\n 1) Teoría de las Aperturas.\n 2) Finales teóricos.\n 3) Mejorar tu juego en general',
+      descripcion: ' Es MUY IMPORTANTE ANALIZAR TUS PARTIDAS. Para hacerlo mejor la próxima vez. Trabajaremos:</br>1) Teoría de las Aperturas.</br>2) Finales teóricos.</br>3) Mejorar tu juego en general',
       enlace: 'https://academiaajedrezhoy.blogspot.com/search?updated-max=2025-03-08T07:53:00-03:00&max-results=13&start=4&by-date=false',
     },
     {
