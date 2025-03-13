@@ -32,28 +32,33 @@ const Courses = () => {
   const cursos = [
     {
       titulo: 'Clases Personalizadas de Ajedrez',
-      descripcion: 'Clases individuales adaptadas a todos los niveles y edades, impartidas por el Maestro Internacional Guillermo José Llanos.',
-      enlace: 'https://ajedrezhoyflow.com/',
+      descripcion: 'Clases individuales adaptadas a todos los niveles y edades, impartidas por el Maestro Internacional y FIDE trainer Guillermo José Llanos y el destacado plantel de profesores de la Academia Ajedrez HOY.',
+      enlace: 'https://academiaajedrezhoy.blogspot.com/2020/10/clases-on-line-2041.html',
     },
     {
-      titulo: 'Curso de Ajedrez Formativo (CAF)',
-      descripcion: 'Programa estructurado en niveles que abarca desde finales y táctica hasta estrategia e historia del ajedrez.',
-      enlace: 'https://ajedrezhoyflow.com/',
+      titulo: 'Análisis de tus partidas',
+      descripcion: ' Es MUY IMPORTANTE ANALIZAR TUS PARTIDAS. Para hacerlo mejor la próxima vez. Trabajaremos:\n 1) Teoría de las Aperturas.\n 2) Finales teóricos.\n 3) Mejorar tu juego en general',
+      enlace: 'https://academiaajedrezhoy.blogspot.com/search?updated-max=2025-03-08T07:53:00-03:00&max-results=13&start=4&by-date=false',
     },
     {
-      titulo: 'Taller de Cálculo de Ajedrez',
+      titulo: 'Taller de Cálculo de Ajedrez HOY',
       descripcion: 'Sesiones intensivas diseñadas para mejorar la capacidad de cálculo y análisis en las partidas.',
       enlace: 'https://academiaajedrezhoy.blogspot.com/2025/03/entrena-calculo-durante-el-finde.html',
     },
     {
-      titulo: 'Entrenamiento de Cálculo de Ajedrez',
-      descripcion: 'Talleres enfocados en técnicas para calcular combinaciones con precisión y mejorar la visión táctica y estratégica.',
-      enlace: 'https://academiaajedrezhoy.blogspot.com/2025/03/entrenamiento-de-calculo-de-ajedrez-hoy.html',
+      titulo: 'Curso de Ajedrez Formativo (CAF)',
+      descripcion: 'Programa estructurado en cuatro niveles y 5 temas (finales, táctica, estrategia, historia y aperturas)',
+      enlace: 'https://academiaajedrezhoy.blogspot.com/2020/11/caf-curso-de-ajedrez-formativo-programa.html',
     },
     {
       titulo: 'CAF5_AHM+: Curso de Ajedrez Formativo Nivel 5',
-      descripcion: 'Curso avanzado que introduce el Ajedrez HOY Método Plus, abarcando desde el desarrollo y dinámica hasta la iniciativa y ataque.',
+      descripcion: 'Aplicación del CAF en el programa de Alto Rendimiento de la FADA.\n Ajedrez HOY Método + (plus)\n Avances desde el 2015 a la fecha.',
       enlace: 'https://academiaajedrezhoy.blogspot.com/2025/03/caf5ahm-profesor-guillermo-llanos.html',
+    },
+    {
+      titulo: 'Estrategias Ganadoras para la Vida',
+      descripcion: 'Programa de mejoramiento personal basado en el pensamiento del ajedrecista.',
+      enlace: 'https://guillermollanos.blogspot.com/2025/02/mejora-tu-vida-hoyarriesgando-un-dolar.html',
     },
   ];
 
