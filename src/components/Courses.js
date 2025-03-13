@@ -37,7 +37,7 @@ const Courses = () => {
     },
     {
       titulo: 'Análisis de tus partidas',
-      descripcion: ' Es MUY IMPORTANTE ANALIZAR TUS PARTIDAS. Para hacerlo mejor la próxima vez. Trabajaremos:</br>1) Teoría de las Aperturas.</br>2) Finales teóricos.</br>3) Mejorar tu juego en general',
+      descripcion: ' Es MUY IMPORTANTE ANALIZAR TUS PARTIDAS. Para hacerlo mejor la próxima vez. Trabajaremos:<br />1) Teoría de las Aperturas.<br />2) Finales teóricos.<br />3) Mejorar tu juego en general',
       enlace: 'https://academiaajedrezhoy.blogspot.com/search?updated-max=2025-03-08T07:53:00-03:00&max-results=13&start=4&by-date=false',
     },
     {
@@ -52,7 +52,7 @@ const Courses = () => {
     },
     {
       titulo: 'CAF5_AHM+: Curso de Ajedrez Formativo Nivel 5',
-      descripcion: 'Aplicación del CAF en el programa de Alto Rendimiento de la FADA.\n Ajedrez HOY Método + (plus)\n Avances desde el 2015 a la fecha.',
+      descripcion: 'Aplicación del CAF en el programa de Alto Rendimiento de la FADA.<br />Ajedrez HOY Método + (plus)<br />Avances desde el 2015 a la fecha.',
       enlace: 'https://academiaajedrezhoy.blogspot.com/2025/03/caf5ahm-profesor-guillermo-llanos.html',
     },
     {
