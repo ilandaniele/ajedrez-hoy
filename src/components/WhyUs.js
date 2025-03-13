@@ -53,39 +53,34 @@ const WhyUs = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={variants}
-      className="bg-black text-white py-20 px-6"
+      className="bg-black text-white py-16 px-6"
     >
-      <h2 className="text-6xl font-bold text-center mb-12">
+      <h2 className="text-5xl font-bold text-center mb-8">
         ¿Por qué elegir <span className="text-blue-500">Ajedrez HOY</span>?
       </h2>
-      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
-        Desde las primeras clases empezarás a <b>pensar diferente</b> sobre el ajedrez y sobre la vida.  
-      </p>
-      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
+      <p className="text-center text-lg max-w-3xl mx-auto mb-4">
+        Desde las primeras clases empezarás a <b>pensar diferente</b> sobre el ajedrez y la vida.  
         Trabajaremos con un método <b>adaptado a tus necesidades</b>, que te permitirá <b>crear nuevos hábitos</b>.  
       </p>
-      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
-        Hemos desarrollado un sistema que <b>REALMENTE FUNCIONA</b>.  
+      <p className="text-center text-lg max-w-3xl mx-auto mb-4">
+        Hemos desarrollado un sistema que <b>REALMENTE FUNCIONA</b>. Lo hemos comprobado por <b>más de 25 años</b>, con <b>miles de estudiantes</b> de todas las edades y niveles.
       </p>
-      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
-        Lo hemos comprobado por <b>más de 25 años</b>, con <b>miles de estudiantes</b> de todas las edades y niveles.  
-      </p>
-      <p className="text-center text-lg max-w-3xl mx-auto mb-16 font-bold text-yellow-400">
+      <p className="text-center text-lg max-w-3xl mx-auto mb-8 font-bold text-yellow-400">
         No sigas improvisando. Aprovechá <b>NUESTRA EXPERIENCIA</b>.
       </p>
       
-      <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={variants}>
+      <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto" variants={variants}>
         {services.map((service, index) => (
           <motion.div
             key={index}
             variants={itemVariants}
             className="group perspective"
           >
-            <div className="relative w-full h-56 [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
-              <div className="absolute inset-0 flex items-center justify-center text-center text-2xl font-bold p-8 bg-gray-900 rounded-lg shadow-lg [backface-visibility:hidden]">
+            <div className="relative w-full h-52 [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
+              <div className="absolute inset-0 flex items-center justify-center text-center text-xl font-bold p-6 bg-gray-900 rounded-lg shadow-lg [backface-visibility:hidden]">
                 {service.title}
               </div>
-              <div className="absolute inset-0 flex items-center justify-center text-center text-lg bg-gray-800 p-8 rounded-lg shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div className="absolute inset-0 flex items-center justify-center text-center text-md bg-gray-800 p-6 rounded-lg shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 {service.content}
               </div>
             </div>
