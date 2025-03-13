@@ -59,13 +59,13 @@ const WhyUs = () => {
         ¿Por qué elegir <span className="text-blue-500">Ajedrez HOY</span>?
       </h2>
       <p className="text-center text-lg max-w-3xl mx-auto mb-16">
-        Desde las primeras clases empezarás a <b>pensar diferente</b> sobre el ajedrez y la vida. 
-        Con una <b>nueva perspectiva</b>, desarrollarás tu potencial al máximo dentro y fuera del tablero.  
-        Trabajaremos con un método <b>adaptado a tus necesidades</b> y basado en la <b>toma de consciencia</b> y la <b>creación de hábitos</b>.  
+        Desde las primeras clases empezarás a <b>pensar diferente</b> sobre el ajedrez y sobre la vida.  
+        Trabajaremos con un método <b>adaptado a tus necesidades</b>, que te permitirá <b>crear nuevos hábitos</b>.  
         <br /><br />
-        Combinamos <b>estudio y entrenamiento</b> en un ritmo adecuado para cada alumno. Nuestro sistema, probado por <b>más de 25 años</b> y con miles de estudiantes de todas las edades, ha demostrado que <b>REALMENTE FUNCIONA</b>.  
+        Hemos desarrollado un sistema que <b>REALMENTE FUNCIONA</b>.  
+        Lo hemos comprobado por <b>más de 25 años</b>, con <b>miles de estudiantes</b> de todas las edades y niveles.  
         <br /><br />
-        No sigas improvisando. Aprovechá <b>NUESTRA EXPERIENCIA</b>.
+        <span className="font-bold text-yellow-400">No sigas improvisando.</span> Aprovechá <b>NUESTRA EXPERIENCIA</b>.
       </p>
       
       <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={variants}>
