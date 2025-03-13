@@ -49,7 +49,7 @@ const Courses = () => {
     {
       titulo: "Análisis de tus partidas",
       descripcion:
-        "Es MUY IMPORTANTE ANALIZAR TUS PARTIDAS. Para hacerlo mejor la próxima vez. Trabajaremos:\n1) Teoría de las Aperturas.\n2) Finales teóricos.\n3) Mejorar tu juego en general",
+        "Es <strong>MUY IMPORTANTE ANALIZAR TUS PARTIDAS</strong>. Para hacerlo mejor la próxima vez. Trabajaremos:\n1) Teoría de las Aperturas.\n2) Finales teóricos.\n3) Mejorar tu juego en general",
       enlace:
         "https://academiaajedrezhoy.blogspot.com/search?updated-max=2025-03-08T07:53:00-03:00&max-results=13&start=4&by-date=false",
     },
