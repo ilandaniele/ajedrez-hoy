@@ -58,14 +58,20 @@ const WhyUs = () => {
       <h2 className="text-6xl font-bold text-center mb-12">
         ¿Por qué elegir <span className="text-blue-500">Ajedrez HOY</span>?
       </h2>
-      <p className="text-center text-lg max-w-3xl mx-auto mb-16">
+      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
         Desde las primeras clases empezarás a <b>pensar diferente</b> sobre el ajedrez y sobre la vida.  
+      </p>
+      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
         Trabajaremos con un método <b>adaptado a tus necesidades</b>, que te permitirá <b>crear nuevos hábitos</b>.  
-        <br /><br />
+      </p>
+      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
         Hemos desarrollado un sistema que <b>REALMENTE FUNCIONA</b>.  
+      </p>
+      <p className="text-center text-lg max-w-3xl mx-auto mb-6">
         Lo hemos comprobado por <b>más de 25 años</b>, con <b>miles de estudiantes</b> de todas las edades y niveles.  
-        <br /><br />
-        <span className="font-bold text-yellow-400">No sigas improvisando.</span> Aprovechá <b>NUESTRA EXPERIENCIA</b>.
+      </p>
+      <p className="text-center text-lg max-w-3xl mx-auto mb-16 font-bold text-yellow-400">
+        No sigas improvisando. Aprovechá <b>NUESTRA EXPERIENCIA</b>.
       </p>
       
       <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={variants}>
