@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion'; // Importa framer-motion
+import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const menuItems = [
     { name: 'Inicio', sectionId: 'presentation' },
@@ -12,22 +15,38 @@ const Header = () => {
     { name: 'Acerca de', sectionId: 'aboutUs' },
     { name: 'Preguntas Frecuentes', sectionId: 'faqs' },
     { name: 'Contacto', sectionId: 'contact' },
-    { name: 'Blog', link: 'https://academiaajedrezhoy.blogspot.com/' }
+    { name: 'Blog', link: 'http://ajedrezhoy.blog' }
   ];
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
+
     if (section) {
-      const offset = -60; // Ajuste para que el header no tape las secciones
+      const offset = 60; // Ajuste de altura para que el header no tape el contenido
       const elementPosition = section.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition + offset;
+      const offsetPosition = elementPosition - offset;
 
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
       });
     }
+
     setMenuOpen(false); // Cierra el menú después de hacer clic en un elemento
+  };
+
+  const handleNavigation = (item) => {
+    if (item.link) {
+      window.open(item.link, '_blank'); // Abre enlaces externos en nueva pestaña
+    } else {
+      if (location.pathname !== '/') {
+        // Si estamos en una página interna, navegamos al inicio primero
+        navigate('/');
+        setTimeout(() => scrollToSection(item.sectionId), 300); // Espera que cargue y luego scrollea
+      } else {
+        scrollToSection(item.sectionId);
+      }
+    }
   };
 
   // Animación para los elementos del menú
@@ -52,7 +71,7 @@ const Header = () => {
           {/* Logo */}
           <div
             className="flex items-center space-x-4 cursor-pointer"
-            onClick={() => scrollToSection('presentation')}
+            onClick={() => handleNavigation({ sectionId: 'presentation' })}
           >
             <div className="h-16 w-auto overflow-hidden">
               <img
@@ -79,13 +98,7 @@ const Header = () => {
                   <motion.li
                     key={index}
                     className="hover:text-custom-pink cursor-pointer transition-colors duration-200 px-4 py-2 md:px-2 md:py-1"
-                    onClick={() => {
-                      if (item.link) {
-                        window.open(item.link, '_blank'); // Abre en una nueva pestaña
-                      } else {
-                        scrollToSection(item.sectionId);
-                      }
-                    }}
+                    onClick={() => handleNavigation(item)}
                     variants={menuVariants}
                   >
                     {item.name}

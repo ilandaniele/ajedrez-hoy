@@ -1,37 +1,19 @@
-"use client"
-
-import React, { useEffect } from "react"
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
-  const controls = useAnimation()
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 })
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible")
+      controls.start("visible");
     }
-  }, [controls, inView])
+  }, [controls, inView]);
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.3,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  }
-
-  // Función para procesar HTML y saltos de línea
   const formatDescription = (text) => {
     // Dividir por saltos de línea
     const lines = text.split("\n")
@@ -47,84 +29,66 @@ const Courses = () => {
 
   const cursos = [
     {
+      id: "clases-personalizadas",
       titulo: "Clases Personalizadas de Ajedrez",
-      descripcion:
-        "Clases individuales adaptadas a todos los niveles y edades, impartidas por el <strong>Maestro Internacional y FIDE trainer Guillermo José Llanos</strong> y el destacado plantel de profesores de la Academia Ajedrez HOY.",
-      enlace: "https://academiaajedrezhoy.blogspot.com/2020/10/clases-on-line-2041.html",
+      descripcion: "Clases individuales adaptadas a todos los niveles y edades, impartidas por el <strong>Maestro Internacional y FIDE trainer Guillermo José Llanos</strong> y el destacado plantel de profesores de la Academia Ajedrez HOY.",
+      ruta: "/courses/clases-personalizadas",
     },
     {
+      id: "analisis-partidas",
       titulo: "Análisis de tus partidas",
-      descripcion:
-        "Es <strong>MUY IMPORTANTE ANALIZAR TUS PARTIDAS</strong>. Para hacerlo mejor la próxima vez. Trabajaremos:\n1) <strong>Teoría de las Aperturas</strong>.\n2) <strong>Finales teóricos</strong>.\n3) <strong>Mejorar tu juego</strong> en general",
-      enlace:
-        "https://academiaajedrezhoy.blogspot.com/search?updated-max=2025-03-08T07:53:00-03:00&max-results=13&start=4&by-date=false",
+      descripcion: "Es <strong>MUY IMPORTANTE ANALIZAR TUS PARTIDAS</strong>. Para hacerlo mejor la próxima vez. Trabajaremos:\n1) <strong>Teoría de las Aperturas</strong>.\n2) <strong>Finales teóricos</strong>.\n3) <strong>Mejorar tu juego</strong> en general",
+      ruta: "/courses/analisis-partidas",
     },
     {
+      id: "taller-calculo",
       titulo: "Taller de Cálculo de Ajedrez HOY",
-      descripcion:
-        "Sesiones intensivas diseñadas para mejorar la <strong>capacidad de cálculo</strong> y análisis en las partidas.",
-      enlace: "https://academiaajedrezhoy.blogspot.com/2025/03/entrena-calculo-durante-el-finde.html",
+      descripcion: "Sesiones intensivas diseñadas para mejorar la <strong>capacidad de cálculo</strong> y análisis en las partidas.",
+      ruta: "/courses/taller-calculo",
     },
     {
+      id: "curso-caf",
       titulo: "Curso de Ajedrez Formativo (CAF)",
-      descripcion:
-        "Programa estructurado en <strong>cuatro niveles</strong> y <strong>5 temas</strong> (finales, táctica, estrategia, historia y aperturas)",
-      enlace: "https://academiaajedrezhoy.blogspot.com/2020/11/caf-curso-de-ajedrez-formativo-programa.html",
+      descripcion: "Programa estructurado en <strong>cuatro niveles</strong> y <strong>5 temas</strong> (finales, táctica, estrategia, historia y aperturas)",
+      ruta: "/courses/curso-caf",
     },
     {
+      id: "caf5-ahm",
       titulo: "CAF5_AHM+: Curso de Ajedrez Formativo Nivel 5",
-      descripcion:
-        "Aplicación del CAF en el programa de <strong>Alto Rendimiento</strong> de la FADA.\n<strong>Ajedrez HOY Método + (plus)</strong>\nAvances desde el 2015 a la fecha.",
-      enlace: "https://academiaajedrezhoy.blogspot.com/2025/03/caf5ahm-profesor-guillermo-llanos.html",
+      descripcion: "Aplicación del CAF en el programa de <strong>Alto Rendimiento</strong> de la FADA.\n<strong>Ajedrez HOY Método + (plus)</strong>\nAvances desde el 2015 a la fecha.",
+      ruta: "/courses/caf5-ahm",
     },
     {
+      id: "estrategias-vida",
       titulo: "Estrategias Ganadoras para la Vida",
       descripcion: "Programa de <strong>mejoramiento personal</strong> basado en el pensamiento del ajedrecista.",
-      enlace: "https://guillermollanos.blogspot.com/2025/02/mejora-tu-vida-hoyarriesgando-un-dolar.html",
+      ruta: "/courses/estrategias-vida",
     },
-  ]
+  ];
 
   return (
-    <motion.section
-      id="courses"
-      className="py-12 bg-gray-900"
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={containerVariants}
-    >
+    <motion.section id="courses" className="py-12 bg-gray-900" ref={ref} initial="hidden" animate={controls}>
       <div className="container mx-auto px-4">
-        <motion.h2 className="text-3xl font-bold text-center text-white mb-8" variants={itemVariants}>
-          Cursos Disponibles
-        </motion.h2>
-        <motion.p className="text-center text-white mb-8" variants={itemVariants}>
-          Mejora tus habilidades en ajedrez con los cursos y talleres ofrecidos por el Maestro Internacional Guillermo
-          José Llanos.
-        </motion.p>
-        <motion.div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" variants={containerVariants}>
-          {cursos.map((curso, index) => (
+        <motion.h2 className="text-3xl font-bold text-center text-white mb-8">Cursos Disponibles</motion.h2>
+        <motion.div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {cursos.map((curso) => (
             <motion.article
-              key={index}
-              className="bg-gray-800 p-6 rounded-lg shadow-md hover:bg-gray-700 transition duration-300"
-              variants={itemVariants}
+              key={curso.id}
+              className="bg-gray-800 p-6 rounded-lg shadow-md hover:bg-gray-700 cursor-pointer"
+              onClick={() => {
+                navigate(curso.ruta);
+                window.scrollTo({ top: 0, behavior: "smooth" }); // Mueve hacia arriba al cambiar de página
+              }}
             >
               <h3 className="text-xl font-semibold text-white mb-4">{curso.titulo}</h3>
               <p className="text-white mb-4">{formatDescription(curso.descripcion)}</p>
-              <a
-                href={curso.enlace}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
-              >
-                Más información
-              </a>
+              <span className="text-blue-400 hover:underline">Más información</span>
             </motion.article>
           ))}
         </motion.div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default Courses
-
+export default Courses;
