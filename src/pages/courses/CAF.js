@@ -452,6 +452,22 @@ Tercer elemento: debilidades tácticas
           <li>📧 <b>Email:</b> <a href="mailto:guillermollanos@gmail.com" className="text-blue-400 hover:underline">guillermollanos@gmail.com</a></li>
           <li>📱 <b>WhatsApp:</b> <a href="https://wa.me/5491160561605" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">+54 911 6056 1605</a></li>
         </ul>
+
+        <div className="flex justify-center mt-6">
+          <a
+            href="https://wa.me/5491160561605"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-bold transition"
+          >
+            📩 Contactar por WhatsApp
+          </a>
+        </div>
+
+        <p className="text-gray-300 italic mt-6">
+          <b>Copyright © Guillermo Llanos, 2004.</b> 
+          Prohibida la reproducción total o parcial por cualquier medio sin autorización del autor.
+        </p>
       </div>
     </motion.section>
   );

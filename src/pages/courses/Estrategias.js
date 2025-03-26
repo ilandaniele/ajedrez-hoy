@@ -65,11 +65,10 @@ const Estrategias = () => {
           💰 Costos y Planes
         </h2>
         <p className="text-gray-300 mb-6">
-          <b>Valor de por vida:</b> <span className="text-green-400">$1 USD</span> o su equivalente en moneda local.  
+          <b>Valor de por vida:</b> <span className="text-green-400">$20 USD</span> o su equivalente en moneda local.  
           <br />
           <b>Fecha límite para inscripción:</b> <span className="text-red-400">30 de abril de 2025.</span>  
           <br />
-          <b>A partir del 1/5/25, el valor sube a:</b> <span className="text-yellow-400">$5 USD.</span>  
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
