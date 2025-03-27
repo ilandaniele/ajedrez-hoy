@@ -41,7 +41,7 @@ const ClasesPersonalizadas = () => {
       title: "Avanzado",
       price: "$420.000",
       description: "Entrenamiento intensivo con seguimiento personalizado.",
-      features: ["12 hora de clase por mes"],
+      features: ["12 horas de clase por mes"],
     },
   ];
 
