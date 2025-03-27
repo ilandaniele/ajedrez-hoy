@@ -171,9 +171,10 @@ const CAF = () => {
         </p>
 
         {/* Pricing Section */}
-        <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
+        <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400 flex items-center gap-2">
           💰 Costos y Planes
         </h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">
           {[{
             title: "Por Tema",
@@ -181,6 +182,7 @@ const CAF = () => {
             usd: "$12 USD",
             ars: "$12.000 ARS",
             description: "Accedé a un solo tema de cualquiera de los niveles",
+            features: ["Hasta 1 tema de cualquiera de los niveles"],
             cta: "Comprar Tema"
           }, {
             title: "Por Nivel",
@@ -188,6 +190,7 @@ const CAF = () => {
             usd: "$15 USD",
             ars: "$15.000 ARS",
             description: "Accedé a todos los temas de un nivel completo",
+            features: ["Hasta 1 nivel completo con todos sus temas"],
             cta: "Comprar Nivel"
           }, {
             title: "Curso Completo",
@@ -195,28 +198,47 @@ const CAF = () => {
             usd: "$40 USD",
             ars: "$40.000 ARS",
             description: "Accedé a los 4 niveles con todos sus temas y actualizaciones de por vida",
+            features: [
+              "Todos los niveles con todos sus temas",
+              "Clases y eventos online exclusivos durante el año",
+              "Incluye futuras actualizaciones del CAF de por vida",
+              "Acceso al grupo de Discord"
+            ],
             cta: "Comprar Curso"
           }].map((plan, idx) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="rounded-lg p-6 text-center shadow-md cursor-pointer bg-[#1e2533] hover:bg-[#2d3645] transition-all"
+              className="rounded-lg p-6 text-center shadow-md cursor-pointer bg-[#1e2533] hover:bg-[#2d3645] transition-all flex flex-col justify-between"
               key={idx}
             >
-              <h3 className="text-2xl font-bold text-white mb-2">{plan.title}</h3>
-              <p className="line-through text-red-400 mr-1">{plan.originalPrice}</p>
-              <p className="text-green-400 text-xl font-semibold">{plan.usd}</p>
-              <p className="text-green-400 text-sm mb-2">{plan.ars}</p>
-              <p className="text-gray-300 mb-4 text-sm">{plan.description}</p>
-              <button
-                onClick={scrollToPayment}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold"
-              >
-                {plan.cta}
-              </button>
-              <p className="text-red-400 text-sm mt-2 font-bold">50% OFF por lanzamiento</p>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">{plan.title}</h3>
+                <p className="line-through text-red-400">{plan.originalPrice}</p>
+                <p className="text-green-400 text-xl font-semibold">{plan.usd}</p>
+                <p className="text-green-400 text-sm mb-4">{plan.ars}</p>
+
+                <p className="text-gray-300 mb-4 text-sm">{plan.description}</p>
+                <div className="border-t border-gray-600 my-4"></div>
+                <ul className="text-left text-sm text-gray-300 space-y-2 mb-4">
+                  {plan.features.map((feat, i) => (
+                    <li key={i} className="border-b border-gray-700 pb-2">{feat}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <button
+                  onClick={scrollToPayment}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold w-full"
+                >
+                  {plan.cta}
+                </button>
+                <p className="text-red-400 text-sm mt-2 font-bold">50% OFF por lanzamiento</p>
+              </div>
             </motion.div>
           ))}
         </div>
+
+
 
         <h2 ref={paymentRef} className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
           📅 Inscripción y Métodos de Pago
