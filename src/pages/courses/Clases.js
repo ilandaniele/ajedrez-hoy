@@ -20,28 +20,28 @@ const ClasesPersonalizadas = () => {
   const plans = [
     {
       title: "Individual",
-      price: "$40.000",
+      price: "$50.000",
       description: "Ideal para una clase puntual o de prueba.",
-      features: ["1 clase"],
+      features: ["1 hora de clase"],
     },
     {
       title: "Básico",
-      price: "$140.000",
+      price: "$160.000",
       description: "Perfecto para mantener una práctica mensual constante.",
-      features: ["4 clases por mes"],
+      features: ["4 horas de clase por mes"],
     },
     {
       title: "Intermedio",
       price: "$300.000",
       description: "Para estudiantes comprometidos con el progreso.",
-      features: ["8 clases por mes"],
+      features: ["8 horas de clase por mes"],
       highlight: true,
     },
     {
       title: "Avanzado",
-      price: "$450.000",
+      price: "$420.000",
       description: "Entrenamiento intensivo con seguimiento personalizado.",
-      features: ["12 clases por mes"],
+      features: ["12 hora de clase por mes"],
     },
   ];
 
