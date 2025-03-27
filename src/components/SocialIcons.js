@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 
-const SocialIcons = ({ iconsToShow = [], iconClasses = {} }) => {
+const SocialIcons = ({ iconsToShow = [], iconClasses = {}, animateOnHover = true, hoverColor = '#FFD700' }) => {
   const availableIcons = {
     facebook: {
       icon: <FaFacebook size={24} />,
@@ -51,10 +51,13 @@ const SocialIcons = ({ iconsToShow = [], iconClasses = {} }) => {
           href={availableIcons[icon]?.link || '#'}
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ y: -6 }}
-          className={`${iconClasses[icon] || ''} text-white transition-all duration-300 hover:text-yellow-400 drop-shadow-[0_1px_1px_rgba(255,255,255,0.1)]`}
+          whileHover={animateOnHover ? { y: -6 } : {}}
+          className={`text-white transition-all duration-300 ${iconClasses[icon] || ''}`}
+          style={{ '--hover-color': hoverColor }}
         >
-          {availableIcons[icon]?.icon}
+          <span className="hover:text-[color:var(--hover-color)]">
+            {availableIcons[icon]?.icon}
+          </span>
         </motion.a>
       ))}
     </div>

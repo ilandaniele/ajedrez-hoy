@@ -83,6 +83,7 @@ const Footer = () => {
         >
           <SocialIcons iconsToShow={[
             'facebook', 'instagram', 'twitter', 'whatsapp', 'twitch', 'youtube', 'tiktok']}
+            hoverColor="#FFD700"
           />
         </motion.div>
 
