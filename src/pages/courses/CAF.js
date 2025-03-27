@@ -204,13 +204,23 @@ const CAF = () => {
               "Incluye futuras actualizaciones del CAF de por vida",
               "Acceso al grupo de Discord"
             ],
+            highlight: true,
             cta: "Comprar Curso"
           }].map((plan, idx) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="rounded-lg p-6 text-center shadow-md cursor-pointer bg-[#1e2533] hover:bg-[#2d3645] transition-all flex flex-col justify-between"
+              className={`rounded-lg p-6 text-center shadow-md cursor-pointer bg-[#1e2533] hover:bg-[#2d3645] transition-all flex flex-col justify-between ${
+                plan.highlight
+                  ? "bg-blue-950 border-2 border-blue-500 hover:bg-blue-900"
+                  : "bg-[#1e2533] hover:bg-[#2d3645]"
+              }`}
               key={idx}
             >
+              {plan.highlight && (
+                <div className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded mb-2">
+                  ⭐ Recomendado
+                </div>
+              )}
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.title}</h3>
                 <p className="line-through text-red-400">{plan.originalPrice}</p>
@@ -219,7 +229,7 @@ const CAF = () => {
 
                 <p className="text-gray-300 mb-4 text-sm">{plan.description}</p>
                 <div className="border-t border-gray-600 my-4"></div>
-                <ul className="text-left text-sm text-gray-300 space-y-2 mb-4">
+                <ul className="text-center text-sm text-gray-300 space-y-2 mb-4">
                   {plan.features.map((feat, i) => (
                     <li key={i} className="border-b border-gray-700 pb-2">{feat}</li>
                   ))}
@@ -228,7 +238,11 @@ const CAF = () => {
               <div>
                 <button
                   onClick={scrollToPayment}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold w-full"
+                  className={`bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold w-full transition-colors duration-200 ${
+                    plan.highlight
+                      ? "bg-yellow-500 hover:bg-yellow-600 text-black"
+                      : "bg-blue-600 hover:bg-blue-700 text-white"
+                  }`}
                 >
                   {plan.cta}
                 </button>
