@@ -125,7 +125,7 @@ const ClasesPersonalizadas = () => {
                 <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
                 <div className="flex-grow"></div>
                 <div className="border-t border-gray-600 my-4"></div>
-                <ul className="text-left text-sm text-gray-300 space-y-2 mb-6">
+                <ul className="text-center text-sm text-gray-300 space-y-2 mb-6">
                   {plan.features.map((feat, i) => (
                     <li key={i} className="border-b border-gray-700 pb-2">{feat}</li>
                   ))}
