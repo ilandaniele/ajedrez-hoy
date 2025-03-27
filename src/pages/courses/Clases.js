@@ -47,11 +47,11 @@ const ClasesPersonalizadas = () => {
           📌 ¿Cómo funcionan las clases?
         </h2>
         <ul className="list-disc list-inside text-gray-300 mb-6">
-          <li><b>Modalidad:</b> Clases individuales o grupales en línea.</li>
-          <li><b>Plataforma:</b> Zoom, Google Meet o Skype.</li>
-          <li><b>Duración:</b> 60 minutos por sesión.</li>
-          <li><b>Horarios:</b> Flexibles y adaptados a tu disponibilidad.</li>
-          <li><b>Contenido:</b> Aperturas, táctica, estrategia y finales.</li>
+          <li><b>Modalidad:</b> Clases individuales o grupales en línea</li>
+          <li><b>Plataforma:</b> Zoom</li>
+          <li><b>Duración:</b> a combinar con él/los estudiantes</li>
+          <li><b>Horarios:</b> Flexibles y adaptados a tu disponibilidad</li>
+          <li><b>Contenido:</b> Clases prácticas, predominando Aperturas, táctica, estrategia y finales</li>
         </ul>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
@@ -76,20 +76,25 @@ const ClasesPersonalizadas = () => {
             </tr>
           </thead>
           <tbody>
+          <tr>
+              <td className="border border-gray-600 px-4 py-2">Individual</td>
+              <td className="border border-gray-600 px-4 py-2">1 clase</td>
+              <td className="border border-gray-600 px-4 py-2">$40,000</td>
+            </tr>
             <tr>
               <td className="border border-gray-600 px-4 py-2">Básico</td>
               <td className="border border-gray-600 px-4 py-2">4 clases/mes</td>
-              <td className="border border-gray-600 px-4 py-2">$XX</td>
+              <td className="border border-gray-600 px-4 py-2">$140,000</td>
             </tr>
             <tr>
               <td className="border border-gray-600 px-4 py-2">Intermedio</td>
               <td className="border border-gray-600 px-4 py-2">8 clases/mes</td>
-              <td className="border border-gray-600 px-4 py-2">$XX</td>
+              <td className="border border-gray-600 px-4 py-2">$300,000</td>
             </tr>
             <tr>
               <td className="border border-gray-600 px-4 py-2">Avanzado</td>
               <td className="border border-gray-600 px-4 py-2">12 clases/mes</td>
-              <td className="border border-gray-600 px-4 py-2">$XX</td>
+              <td className="border border-gray-600 px-4 py-2">$450,000</td>
             </tr>
           </tbody>
         </table>

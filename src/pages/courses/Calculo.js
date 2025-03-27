@@ -78,10 +78,11 @@ const Calculo = () => {
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
-          💰 Costos y Métodos de Pago
+          💰 Costo del curso
         </h2>
-        <p className="text-gray-300 mb-4">
-          💵 Valor por clase: <b>$10.000 (Argentina) / 10 USD (Exterior)</b>
+        <p className="text-gray-300 mb-6">
+        💵 Valor por clase: <b>$10,000 (Argentina)</b> o{" "}
+          <b>10 USD (Exterior)</b>.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">

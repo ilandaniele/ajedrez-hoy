@@ -67,7 +67,7 @@ const Estrategias = () => {
         <p className="text-gray-300 mb-6">
           <b>Valor de por vida:</b> <span className="text-green-400">$20 USD</span> o su equivalente en moneda local.  
           <br />
-          <b>Fecha límite para inscripción:</b> <span className="text-red-400">30 de abril de 2025.</span>  
+          <b>Fecha límite para inscripción:</b> <span className="text-red-400">30 de Mayo de 2025.</span>  
           <br />
         </p>
 

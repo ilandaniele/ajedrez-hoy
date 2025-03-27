@@ -409,6 +409,39 @@ Tercer elemento: debilidades tácticas
           Con la compra del curso tendrás acceso a un <b>Grupo privado en Discord</b> para realizar consultas, compartir avances y formar parte de la comunidad de estudiantes del CAF.
         </p>
 
+        <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
+          💰 Costo del curso
+        </h2>
+        <ul className="list-disc list-inside text-base">
+          <li>
+            <b>Curso completo:</b>{" "}
+            <span className="line-through text-red-400 mr-1">$80</span>
+            <span className="text-green-400 font-bold">$40 USD </span>
+            (Exterior) o{" "}
+            <span className="text-green-400 font-bold">$40,000 </span>
+            (Argentina) 
+            <span className="text-red-400 ml-2 font-bold">(50% OFF por lanzamiento)</span>
+          </li>
+          <li>
+            <b>Por nivel:</b>{" "}
+            <span className="line-through text-red-400 mr-1">$30</span>
+            <span className="text-green-400 font-bold">$15 USD </span>   
+            (Exterior) o{" "}
+            <span className="text-green-400 font-bold">$15,000 </span>
+            (Argentina) 
+            <span className="text-red-400 ml-2 font-bold">(50% OFF por lanzamiento)</span>
+          </li>
+          <li>
+            <b>Por tema (de los 4 niveles):</b>{" "}
+            <span className="line-through text-red-400 mr-1">$24</span>
+            <span className="text-green-400 font-bold">$12 USD </span>
+            (Exterior) o{" "}
+            <span className="text-green-400 font-bold">$12,000 </span>
+            (Argentina) 
+            <span className="text-red-400 ml-2 font-bold">(50% OFF por lanzamiento)</span>
+          </li>
+        </ul>
+
 
         <h2 ref={paymentRef} className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
           📅 Inscripción y Métodos de Pago
@@ -416,32 +449,6 @@ Tercer elemento: debilidades tácticas
         <p className="text-gray-300 mb-6">
           Realizá el pago por cualquiera de estos métodos y enviá el comprobante por WhatsApp o email.
         </p>
-
-
-        <div className="bg-gray-800 p-4 rounded-lg mb-6 text-gray-200">
-          <h3 className="text-lg font-semibold mb-2">💰 Precios</h3>
-          <ul className="list-disc list-inside text-base">
-            <li>
-              <b>Curso completo:</b>{" "}
-              <span className="line-through text-red-400 mr-1">$80</span>
-              <span className="text-green-400 font-bold">$40 USD</span> 
-              <span className="text-red-400 ml-2 font-bold">(50% OFF por lanzamiento)</span>
-            </li>
-            <li>
-              <b>Por nivel:</b>{" "}
-              <span className="line-through text-red-400 mr-1">$30</span>
-              <span className="text-green-400 font-bold">$15 USD</span> 
-              <span className="text-red-400 ml-2 font-bold">(50% OFF por lanzamiento)</span>
-            </li>
-            <li>
-              <b>Por tema (para cualquier nivel):</b>{" "}
-              <span className="line-through text-red-400 mr-1">$24</span>
-              <span className="text-green-400 font-bold">$12 USD</span> 
-              <span className="text-red-400 ml-2 font-bold">(50% OFF por lanzamiento)</span>
-            </li>
-          </ul>
-        </div>
-
 
         <PaymentMethods />
 
