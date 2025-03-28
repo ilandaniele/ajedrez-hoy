@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import PaymentMethods from "../../components/PaymentMethods";
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ClasesPersonalizadas = () => {
   const navigate = useNavigate();
@@ -19,29 +20,45 @@ const ClasesPersonalizadas = () => {
 
   const plans = [
     {
+      title: "Asesoramiento",
+      price: "$20.000",
+      originalPrice: "$40.000",
+      description: "Solicitá una sesión para conocer cómo se adaptan las clases a vos.",
+      features: ["El valor se descuenta de tu primera clase", "30 minutos"],
+      buttonTitle: "Solicitar Sesión"
+    },
+    {
       title: "Individual",
       price: "$50.000",
+      originalPrice: "$100.000",
       description: "Ideal para una clase puntual o de prueba.",
       features: ["1 hora de clase"],
+      buttonTitle: "Solicitar Clase"
     },
     {
       title: "Básico",
       price: "$160.000",
+      originalPrice: "$200.000",
       description: "Perfecto para mantener una práctica mensual constante.",
       features: ["4 horas de clase por mes"],
+      buttonTitle: "Solicitar Clases"
     },
     {
       title: "Intermedio",
       price: "$300.000",
+      originalPrice: "$400.000",
       description: "Para estudiantes comprometidos con el progreso.",
       features: ["8 horas de clase por mes"],
       highlight: true,
+      buttonTitle: "Solicitar Clases"
     },
     {
       title: "Avanzado",
       price: "$420.000",
+      originalPrice: "$600.000",
       description: "Entrenamiento intensivo con seguimiento personalizado.",
       features: ["12 horas de clase por mes"],
+      buttonTitle: "Solicitar Clases"
     },
   ];
 
@@ -51,7 +68,7 @@ const ClasesPersonalizadas = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.8 } }}
     >
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-6xl">
         <button 
           className="text-blue-400 hover:underline mb-8 block text-left ml-[-10px]"
           onClick={() => {
@@ -89,7 +106,7 @@ const ClasesPersonalizadas = () => {
         </ul>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
-          🎯 Beneficios de nuestras clases
+          🌟 Beneficios de nuestras clases
         </h2>
         <ul className="list-disc list-inside text-gray-300 mb-6">
           <li>Enseñanza personalizada según tu nivel y objetivos.</li>
@@ -102,7 +119,7 @@ const ClasesPersonalizadas = () => {
           💰 Costos y Planes
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
           {plans.map((plan, idx) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -119,7 +136,10 @@ const ClasesPersonalizadas = () => {
                 </div>
               )}
               <div className="flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-white mb-2 mt-4">{plan.title}</h3>
+                <h3 className="text-2xl font-bold text-white mb-2 mt-2">{plan.title}</h3>
+                <p className="text-white text-lg mb-1">
+                  <span className="line-through decoration-red-500 decoration-2">{plan.originalPrice}</span>
+                </p>
                 <p className="text-green-400 text-xl font-semibold">{plan.price}</p>
                 <p className="text-xs text-gray-400 mb-2">pesos argentinos</p>
                 <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -134,17 +154,38 @@ const ClasesPersonalizadas = () => {
               <div>
                 <button
                   onClick={scrollToPayment}
-                  className={`bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold w-full transition-colors duration-200 ${
+                  className={`px-4 py-2 rounded-md font-semibold w-full transition-colors duration-200 ${
                     plan.highlight
                       ? "bg-yellow-500 hover:bg-yellow-600 text-black"
                       : "bg-blue-600 hover:bg-blue-700 text-white"
                   }`}
                 >
-                  Solicitar Clase
+                  {plan.buttonTitle}
                 </button>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mb-20">
+          <h3 className="text-2xl font-semibold mb-2">¿Necesitás más clases?</h3>
+          <p className="text-gray-300 mb-4">
+            No te preocupes, tenemos planes personalizados por si necesitás más horas de clase.
+          </p>
+          <button
+            onClick={() => {
+              navigate("/#contact");
+              setTimeout(() => {
+                const section = document.getElementById("contact");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }, 100);
+            }}
+            className="mt-2 border border-gray-400 text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
+          >
+            Contactanos si es tu caso
+          </button>
         </div>
 
         <h2 ref={paymentRef} className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
@@ -164,17 +205,18 @@ const ClasesPersonalizadas = () => {
         </p>
         <ul className="list-disc list-inside text-gray-300 mb-6">
           <li>📧 <b>Email:</b> <a href="mailto:guillermollanos@gmail.com" className="text-blue-400 hover:underline">guillermollanos@gmail.com</a></li>
-          <li>📱 <b>WhatsApp:</b> <a href="https://wa.me/5491160561605" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">+54 911 6056 1605</a></li>
+          <li>📞 <b>Teléfono:</b> <a href="https://wa.me/5491160561605" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">+54 911 6056 1605</a></li>
         </ul>
 
-        <div className="flex justify-center mt-6">
+        <div className="mt-6">
           <a
             href="https://wa.me/5491160561605"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-bold transition"
+            className="inline-flex items-center text-white text-xl bg-green-500 px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 transition duration-300"
           >
-            📩 Contactar por WhatsApp
+            <FaWhatsapp className="text-2xl mr-3" />
+            Contactar por Whatsapp
           </a>
         </div>
       </div>

@@ -64,7 +64,6 @@ const Presentation = () => {
 
           <p className="text-2xl md:text-4xl mb-8">Academia de Ajedrez</p>
 
-          {/* Botón de WhatsApp */}
           <a
             href="https://wa.me/5491160561605"
             target="_blank"
