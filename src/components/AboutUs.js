@@ -110,8 +110,13 @@ const AboutUs = () => {
               <li>Embajador de ChessKid en Argentina.</li>
               <li>Fundador y director de la Academia Internacional Ajedrez HOY.</li>
               <li>Reconocido entrenador y coach de ajedrez con alumnos en todo el mundo.</li>
+              <li>Representante Argentino categoría Senior en el Mundial 2015 (Italia) y en el Mundial por equipos 2019 (Grecia).</li>
               <li>Organizador de múltiples torneos nacionales e internacionales.</li>
-              <li>Autor de varios cursos y material educativo sobre ajedrez.</li>
+              <li>Autor del Curso de Ajedrez Formativo (CAF).</li>
+              <li>Autor del libro del Semillero a la Maestría, del curso AIR Ataque Indio de Rey.</li>
+              <li>Autor de diversos cursos y material educativo sobre ajedrez para todos los niveles.</li>
+              <li>Profesor de Ajedrez del Colegio Nacional de Buenos Aires.</li>
+              <li>Entrenador en el programa de alto rendimiento de la FADA.</li>
             </ul>
           </motion.div>
         </motion.div>
