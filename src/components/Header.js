@@ -12,9 +12,8 @@ const Header = () => {
     { name: 'Inicio', sectionId: 'presentation' },
     { name: '¿Por qué elegirnos?', sectionId: 'whyUs' },
     { name: 'Cursos', sectionId: 'courses' },
-    { name: 'Acerca de', sectionId: 'aboutUs' },
+    { name: 'Acerca de', route: '/acerca-de' },
     { name: 'Preguntas Frecuentes', sectionId: 'faqs' },
-    { name: 'Contacto', sectionId: 'contact' },
     { name: 'Blog', link: 'http://ajedrezhoy.blog' }
   ];
 
@@ -37,17 +36,19 @@ const Header = () => {
 
   const handleNavigation = (item) => {
     if (item.link) {
-      window.open(item.link, '_blank'); // Abre enlaces externos en nueva pestaña
+      window.open(item.link, '_blank');
+    } else if (item.route) {
+      navigate(item.route);
     } else {
       if (location.pathname !== '/') {
-        // Si estamos en una página interna, navegamos al inicio primero
         navigate('/');
-        setTimeout(() => scrollToSection(item.sectionId), 300); // Espera que cargue y luego scrollea
+        setTimeout(() => scrollToSection(item.sectionId), 300);
       } else {
         scrollToSection(item.sectionId);
       }
     }
   };
+  
 
   // Animación para los elementos del menú
   const menuVariants = {

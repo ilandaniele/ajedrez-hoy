@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import FAQItem from './FAQItem';
+import ContactButton from './ContactButton';
 
 const faqs = [
   {
@@ -71,7 +72,7 @@ const FAQs = () => {
           className="text-4xl font-bold text-center mb-8 text-white"
           variants={variants}
         >
-          Preguntas Frecuentes
+          ¿Aún tenes dudas?
         </motion.h2>
         <motion.div className="backdrop-blur-md bg-white/15 rounded-lg p-6">
           {faqs.map((faq, index) => (
@@ -86,6 +87,10 @@ const FAQs = () => {
               <FAQItem question={faq.question} answer={faq.answer} />
             </motion.div>
           ))}
+
+          <div className="mt-10 flex justify-center">
+            <ContactButton label="Contactanos si es tu caso" />
+          </div>
         </motion.div>
       </div>
     </motion.section>
