@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
 
           <h3 className="text-white font-bold uppercase tracking-wide">Contacto</h3>
-          <div className="border-b-2 border-yellow-400 w-16 mb-1"></div>
+          <div className="border-b-2 border-yellow-400 w-16 mb-8"></div>
 
           <div className="flex items-center gap-2 text-white text-md">
             <FaEnvelope className="text-yellow-400" />
@@ -130,7 +130,7 @@ const Footer = () => {
           <h3 className="text-white font-bold uppercase tracking-wide mb-2">
             Enlaces de Interés
           </h3>
-          <div className="border-b-2 border-yellow-400 w-28 mb-1"></div>
+          <div className="border-b-2 border-yellow-400 w-28 mb-8"></div>
           <ul className="space-y-2 text-white text-md">
             <li className="hover:text-yellow-400 cursor-pointer" onClick={() => navigate('/')}>Inicio</li>
             <li className="hover:text-yellow-400 cursor-pointer">Política de Privacidad</li>
@@ -144,7 +144,7 @@ const Footer = () => {
           <h3 className="text-white font-bold uppercase tracking-wide mb-2">
             Formaciones
           </h3>
-          <div className="border-b-2 border-yellow-400 w-24 mb-1"></div>
+          <div className="border-b-2 border-yellow-400 w-24 mb-8"></div>
           <ul className="space-y-2 text-white text-md">
             <li className="hover:text-yellow-400 cursor-pointer" onClick={goToCoursesSection}>Cursos</li>
             <li className="hover:text-yellow-400 cursor-pointer">Programa Ajedrez HOY</li>
