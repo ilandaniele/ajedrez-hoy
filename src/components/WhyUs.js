@@ -65,8 +65,8 @@ const WhyUs = () => {
       <p className="text-center text-lg max-w-3xl mx-auto mb-4">
         Hemos desarrollado un sistema que <b>REALMENTE FUNCIONA</b>. Lo hemos comprobado por <b>más de 25 años</b>, con <b>miles de estudiantes</b> de todas las edades y niveles.
       </p>
-      <p className="text-center text-lg max-w-3xl mx-auto mb-8 font-bold text-yellow-400">
-        No sigas improvisando. Aprovechá <b>NUESTRA EXPERIENCIA</b>.
+      <p className="text-center text-lg max-w-3xl mx-auto mb-8">
+        No sigas improvisando. Aprovechá <b className="text-yellow-200 font-bold">NUESTRA EXPERIENCIA</b>.
       </p>
       
       <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto" variants={variants}>

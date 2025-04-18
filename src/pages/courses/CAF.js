@@ -5,7 +5,6 @@ import PaymentMethods from "../../components/PaymentMethods";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import levels from '../../data/courses/CAF_levels';
 
-
 const CAF = () => {
   const navigate = useNavigate();
   const [openLevel, setOpenLevel] = useState(null);
@@ -154,14 +153,13 @@ const CAF = () => {
         </div>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
-          📅 Duración y modalidad
+          🗓 Duración y modalidad
         </h2>
         <p className="text-gray-300 mb-6">
           Cada nivel tiene una duración de <b>8 semanas</b>.
           <br />
           Los contenidos del curso se entregan en <b>formato PGN y PDF</b> para que puedas estudiar a tu ritmo y desde cualquier dispositivo.
         </p>
-
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
           📁 Comunidad
@@ -252,16 +250,23 @@ const CAF = () => {
           ))}
         </div>
 
-
-
         <h2 ref={paymentRef} className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
-          📅 Inscripción y Métodos de Pago
+          🗓 Inscripción y Métodos de Pago
         </h2>
         <p className="text-gray-300 mb-6">
           Realizá el pago por cualquiera de estos métodos y enviá el comprobante por WhatsApp o email.
         </p>
 
-        <PaymentMethods />
+        <PaymentMethods
+          hotmartEnabled={true}
+          hotmartLinks={[
+            { title: "Nivel 1: Curso CAF", url: "https://app.hotmart.com/products/manage/5287408/hotlink" },
+            { title: "Nivel 2: Curso CAF", url: "https://app.hotmart.com/products/manage/5287225/hotlink" },
+            { title: "Nivel 3: Curso CAF", url: "https://app.hotmart.com/products/manage/5287288/hotlink" },
+            { title: "Nivel 4: Curso CAF", url: "https://app.hotmart.com/products/manage/5287317/hotlink" },
+            { title: "Curso Completo CAF", url: "https://app.hotmart.com/products/manage/5287361/hotlink" },
+          ]}
+        />
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
           📩 Contacto para inscripción

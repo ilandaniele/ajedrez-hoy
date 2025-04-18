@@ -1,4 +1,3 @@
-// components/ContactButton.js
 import React, { useState } from 'react';
 import ContactForm from './ContactForm';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,7 +9,7 @@ const ContactButton = ({ label = 'Contactanos si es tu caso' }) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-md shadow-md border-2 border-red-500 text-sm"
+        className="bg-gray-800 mt-2 border border-gray-400 text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
       >
         {label.toUpperCase()}
       </button>

@@ -88,8 +88,8 @@ const Analisis = () => {
           💰 Costo del servicio
         </h2>
         <p className="text-gray-300 mb-6">
-          El costo por análisis de partida es de <b>$10,000 (Argentina)</b> o{" "}
-          <b>10 USD (Exterior)</b>.
+          El costo por analisis de 10 partidas es de <b>$200,000 (Argentina)</b> o{" "}
+          <b>200 USD (Exterior)</b>.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">

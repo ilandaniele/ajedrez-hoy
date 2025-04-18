@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import PaymentMethods from "../../components/PaymentMethods";
 import { FaWhatsapp } from 'react-icons/fa';
+import ContactButton from "../../components/ContactButton";
 
 const ClasesPersonalizadas = () => {
   const navigate = useNavigate();
@@ -172,20 +173,7 @@ const ClasesPersonalizadas = () => {
           <p className="text-gray-300 mb-4">
             No te preocupes, tenemos planes personalizados por si necesitás más horas de clase.
           </p>
-          <button
-            onClick={() => {
-              navigate("/#contact");
-              setTimeout(() => {
-                const section = document.getElementById("contact");
-                if (section) {
-                  section.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }, 100);
-            }}
-            className="mt-2 border border-gray-400 text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
-          >
-            Contactanos si es tu caso
-          </button>
+          <ContactButton label="Contactanos si es tu caso" />
         </div>
 
         <h2 ref={paymentRef} className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
