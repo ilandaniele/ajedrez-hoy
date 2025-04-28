@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import PaymentMethods from "../../components/PaymentMethods";
 import { FaWhatsapp } from 'react-icons/fa';
 import ContactButton from "../../components/ContactButton";
+import Costs from "../../components/Costs";
+
 
 const ClasesPersonalizadas = () => {
   const navigate = useNavigate();
@@ -24,6 +26,8 @@ const ClasesPersonalizadas = () => {
       title: "Asesoramiento",
       price: "$20.000",
       originalPrice: "$40.000",
+      priceUSD: "USD 20",
+      originalPriceUSD: "USD 40",
       description: "Solicitá una sesión para conocer cómo se adaptan las clases a vos.",
       features: ["El valor se descuenta de tu primera clase", "30 minutos"],
       buttonTitle: "Solicitar Sesión"
@@ -32,6 +36,8 @@ const ClasesPersonalizadas = () => {
       title: "Individual",
       price: "$50.000",
       originalPrice: "$100.000",
+      priceUSD: "USD 50",
+      originalPriceUSD: "USD 100",
       description: "Ideal para una clase puntual o de prueba.",
       features: ["1 hora de clase"],
       buttonTitle: "Solicitar Clase"
@@ -40,6 +46,8 @@ const ClasesPersonalizadas = () => {
       title: "Básico",
       price: "$160.000",
       originalPrice: "$200.000",
+      priceUSD: "USD 160",
+      originalPriceUSD: "USD 200",
       description: "Perfecto para mantener una práctica mensual constante.",
       features: ["4 horas de clase por mes"],
       buttonTitle: "Solicitar Clases"
@@ -48,6 +56,8 @@ const ClasesPersonalizadas = () => {
       title: "Intermedio",
       price: "$300.000",
       originalPrice: "$400.000",
+      priceUSD: "USD 300",
+      originalPriceUSD: "USD 400",
       description: "Para estudiantes comprometidos con el progreso.",
       features: ["8 horas de clase por mes"],
       highlight: true,
@@ -57,6 +67,8 @@ const ClasesPersonalizadas = () => {
       title: "Avanzado",
       price: "$420.000",
       originalPrice: "$600.000",
+      priceUSD: "USD 420",
+      originalPriceUSD: "USD 600",
       description: "Entrenamiento intensivo con seguimiento personalizado.",
       features: ["12 horas de clase por mes"],
       buttonTitle: "Solicitar Clases"
@@ -120,53 +132,7 @@ const ClasesPersonalizadas = () => {
           💰 Costos y Planes
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
-          {plans.map((plan, idx) => (
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className={`relative rounded-lg p-6 text-center shadow-md cursor-pointer transition-all flex flex-col justify-between min-h-[420px] ${
-                plan.highlight
-                  ? "bg-blue-950 border-2 border-blue-500 hover:bg-blue-900"
-                  : "bg-[#1e2533] hover:bg-[#2d3645]"
-              }`}
-              key={idx}
-            >
-              {plan.highlight && (
-                <div className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded mb-2">
-                  ⭐ Recomendado
-                </div>
-              )}
-              <div className="flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-white mb-2 mt-2">{plan.title}</h3>
-                <p className="text-white text-lg mb-1">
-                  <span className="line-through decoration-red-500 decoration-2">{plan.originalPrice}</span>
-                </p>
-                <p className="text-green-400 text-xl font-semibold">{plan.price}</p>
-                <p className="text-xs text-gray-400 mb-2">pesos argentinos</p>
-                <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
-                <div className="flex-grow"></div>
-                <div className="border-t border-gray-600 my-4"></div>
-                <ul className="text-center text-sm text-gray-300 space-y-2 mb-6">
-                  {plan.features.map((feat, i) => (
-                    <li key={i} className="border-b border-gray-700 pb-2">{feat}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <button
-                  onClick={scrollToPayment}
-                  className={`px-4 py-2 rounded-md font-semibold w-full transition-colors duration-200 ${
-                    plan.highlight
-                      ? "bg-yellow-500 hover:bg-yellow-600 text-black"
-                      : "bg-blue-600 hover:bg-blue-700 text-white"
-                  }`}
-                >
-                  {plan.buttonTitle}
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <Costs plans={plans} scrollToPayment={scrollToPayment} />
 
         <div className="text-center mb-20">
           <h3 className="text-2xl font-semibold mb-2">¿Necesitás más clases?</h3>
@@ -177,7 +143,7 @@ const ClasesPersonalizadas = () => {
         </div>
 
         <h2 ref={paymentRef} className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
-          📅 ¿Cómo Reservar una Clase?
+          🗓 ¿Cómo Reservar una Clase?
         </h2>
         <p className="text-gray-300 mb-6">
           Para reservar tu clase, realiza el pago mediante los siguientes métodos y envía el comprobante al WhatsApp o correo electrónico indicados a continuación.  

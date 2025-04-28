@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import PaymentMethods from "../../components/PaymentMethods";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import levels from '../../data/courses/CAF_levels';
+import Costs from "../../components/Costs";
 
 const CAF = () => {
   const navigate = useNavigate();
@@ -31,6 +32,46 @@ const CAF = () => {
       [levelIndex]: prev[levelIndex] === topicIndex ? null : topicIndex,
     }));
   };
+
+  const plansCAF = [
+    {
+      title: "Por Tema",
+      price: "$12.000",
+      originalPrice: "$24.000",
+      priceUSD: "USD 12",
+      originalPriceUSD: "USD 24",
+      description: "Accedé a un solo tema de cualquiera de los niveles.",
+      features: ["Hasta 1 tema de cualquiera de los niveles"],
+      buttonTitle: "Comprar Tema"
+    },
+    {
+      title: "Por Nivel",
+      price: "$15.000",
+      originalPrice: "$30.000",
+      priceUSD: "USD 15",
+      originalPriceUSD: "USD 30",
+      description: "Accedé a todos los temas de un nivel completo.",
+      features: ["Hasta 1 nivel completo con todos sus temas"],
+      buttonTitle: "Comprar Nivel"
+    },
+    {
+      title: "Curso Completo",
+      price: "$40.000",
+      originalPrice: "$80.000",
+      priceUSD: "USD 40",
+      originalPriceUSD: "USD 80",
+      description: "Accedé a los 4 niveles con todos sus temas y actualizaciones de por vida.",
+      features: [
+        "Todos los niveles con todos sus temas",
+        "Clases y eventos online exclusivos durante el año",
+        "Incluye futuras actualizaciones del CAF de por vida",
+        "Acceso al grupo de Discord"
+      ],
+      highlight: true,
+      buttonTitle: "Comprar Curso"
+    }
+  ];
+  
 
   return (
     <motion.section
@@ -173,82 +214,7 @@ const CAF = () => {
           💰 Costos y Planes
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">
-          {[{
-            title: "Por Tema",
-            originalPrice: "$24 USD",
-            usd: "$12 USD",
-            ars: "$12.000 ARS",
-            description: "Accedé a un solo tema de cualquiera de los niveles",
-            features: ["Hasta 1 tema de cualquiera de los niveles"],
-            cta: "Comprar Tema"
-          }, {
-            title: "Por Nivel",
-            originalPrice: "$30 USD",
-            usd: "$15 USD",
-            ars: "$15.000 ARS",
-            description: "Accedé a todos los temas de un nivel completo",
-            features: ["Hasta 1 nivel completo con todos sus temas"],
-            cta: "Comprar Nivel"
-          }, {
-            title: "Curso Completo",
-            originalPrice: "$80 USD",
-            usd: "$40 USD",
-            ars: "$40.000 ARS",
-            description: "Accedé a los 4 niveles con todos sus temas y actualizaciones de por vida",
-            features: [
-              "Todos los niveles con todos sus temas",
-              "Clases y eventos online exclusivos durante el año",
-              "Incluye futuras actualizaciones del CAF de por vida",
-              "Acceso al grupo de Discord"
-            ],
-            highlight: true,
-            cta: "Comprar Curso"
-          }].map((plan, idx) => (
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className={`rounded-lg p-6 text-center shadow-md cursor-pointer bg-[#1e2533] hover:bg-[#2d3645] transition-all flex flex-col justify-between ${
-                plan.highlight
-                  ? "bg-blue-950 border-2 border-blue-500 hover:bg-blue-900"
-                  : "bg-[#1e2533] hover:bg-[#2d3645]"
-              }`}
-              key={idx}
-            >
-              {plan.highlight && (
-                <div className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded mb-2">
-                  ⭐ Recomendado
-                </div>
-              )}
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.title}</h3>
-                <p className="line-through text-red-400">{plan.originalPrice}</p>
-                <p className="text-green-400 text-xl font-semibold">{plan.usd}</p>
-                <p className="text-green-400 text-sm mb-4">{plan.ars}</p>
-
-                <p className="text-gray-300 mb-4 text-sm">{plan.description}</p>
-                <div className="border-t border-gray-600 my-4"></div>
-                <ul className="text-center text-sm text-gray-300 space-y-2 mb-4">
-                  {plan.features.map((feat, i) => (
-                    <li key={i} className="border-b border-gray-700 pb-2">{feat}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <button
-                  onClick={scrollToPayment}
-                  className={`bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold w-full transition-colors duration-200 ${
-                    plan.highlight
-                      ? "bg-yellow-500 hover:bg-yellow-600 text-black"
-                      : "bg-blue-600 hover:bg-blue-700 text-white"
-                  }`}
-                >
-                  {plan.cta}
-                </button>
-                <p className="text-red-400 text-sm mt-2 font-bold">50% OFF por lanzamiento</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <Costs plans={plansCAF} scrollToPayment={scrollToPayment} columns="sm:grid-cols-3" />
 
         <h2 ref={paymentRef} className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
           🗓 Inscripción y Métodos de Pago

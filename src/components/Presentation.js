@@ -3,24 +3,46 @@ import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaWhatsapp } from 'react-icons/fa';
 
-const images = [
-  '/images/banner1.jpg',
-  '/images/banner2.jpg',
-  '/images/banner3.jpg'
+// Hook para detectar tamaño de pantalla
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
+
+const desktopImages = [
+  '/images/bannerDesktop1.png',
+  '/images/bannerDesktop2.png',
+  '/images/bannerDesktop3.png'
+];
+
+const mobileImages = [
+  '/images/bannerMobile1.png',
+  '/images/bannerMobile2.png',
+  '/images/bannerMobile3.png'
 ];
 
 const Presentation = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
   const [currentImage, setCurrentImage] = useState(0);
+  const isMobile = useIsMobile();
 
-  // Carrusel automático cada 5 segundos
+  const images = isMobile ? mobileImages : desktopImages;
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage(prev => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   useEffect(() => {
     if (inView) {
@@ -36,7 +58,7 @@ const Presentation = () => {
 
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.0 } },
   };
 
   return (
@@ -52,14 +74,13 @@ const Presentation = () => {
             key={currentImage}
             src={images[currentImage]}
             alt={`slide-${currentImage}`}
-            className="max-w-full max-h-full w-auto h-auto object-contain"
+            className=""
             variants={fadeVariants}
             initial="initial"
             animate="animate"
             exit="exit"
           />
         </AnimatePresence>
-        {/* Capa oscura para legibilidad */}
         <div className="absolute inset-0 bg-black opacity-50 z-10" />
       </div>
 
@@ -72,7 +93,6 @@ const Presentation = () => {
           variants={textVariants}
         >
           <p className="text-2xl md:text-4xl mb-8 font-semibold">Academia de Ajedrez</p>
-
           <a
             href="https://wa.me/5491160561605"
             target="_blank"
