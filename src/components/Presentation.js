@@ -65,7 +65,7 @@ const Presentation = () => {
     <section
       id="presentation"
       ref={ref}
-      className="relative min-h-screen flex flex-col overflow-hidden bg-black"
+      className="mt-16 relative min-h-screen flex flex-col overflow-hidden bg-black"
     >
       {/* Carrusel de imágenes */}
       <div className="absolute inset-0 z-0 flex justify-center items-center">
