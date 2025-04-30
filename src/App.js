@@ -8,7 +8,7 @@ import Courses from "./components/Courses";
 import FAQs from "./components/FAQs";
 import Footer from "./components/Footer";
 
-// Importamos las páginas individuales de cada curso
+// Páginas
 import Clases from "./pages/courses/Clases";
 import Analisis from "./pages/courses/Analisis";
 import Calculo from "./pages/courses/Calculo";
@@ -17,12 +17,14 @@ import CAF5 from "./pages/courses/CAF5";
 import Estrategias from "./pages/courses/Estrategias";
 import AboutPage from "./pages/AboutUs";
 
+// Widget flotante
+import WhatsappWidget from "./components/WhatsappWidget";
+
 function App() {
   return (
     <Router>
       <Header />
       <Routes>
-        {/* Página principal */}
         <Route path="/" element={
           <>
             <Presentation />
@@ -31,8 +33,6 @@ function App() {
             <FAQs />
           </>
         } />
-
-        {/* Rutas individuales de cada curso */}
         <Route path="/acerca-de" element={<AboutPage />} />
         <Route path="/courses/clases-personalizadas" element={<Clases />} />
         <Route path="/courses/analisis-partidas" element={<Analisis />} />
@@ -41,6 +41,10 @@ function App() {
         <Route path="/courses/caf5-ahm" element={<CAF5 />} />
         <Route path="/courses/estrategias-vida" element={<Estrategias />} />
       </Routes>
+
+      {/* Botón de WhatsApp flotante */}
+      <WhatsappWidget />
+
       <Footer />
     </Router>
   );
