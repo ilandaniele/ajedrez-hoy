@@ -53,7 +53,7 @@ const Calculo = () => {
           🕒 Horarios Disponibles
         </h2>
         <ul className="list-disc list-inside text-gray-300 mb-6">
-          <li><b>Viernes y Sábado:</b> 19:30 - 20:30 hs</li>
+          <li><b>Viernes y Sábado:</b> 19:00 - 20:00 hs</li>
           <li><b>Domingos:</b> 18:00 - 19:00 hs</li>
         </ul>
         <p className="text-gray-300 mb-6">
