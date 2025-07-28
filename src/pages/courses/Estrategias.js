@@ -69,7 +69,7 @@ const Estrategias = () => {
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
           <h3 className="text-xl font-bold text-yellow-400 mb-2">1️⃣ Grupo Visionario</h3>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
-            <li>🗓️ Del 14 de julio al 13 de septiembre</li>
+            <li>🗓️ Del 14 de Septiembre al 13 de Noviembre de 2025</li>
             <li>💸 Valor: 39 dólares</li>
             <li>🎁 Bonus: mentoría grupal en agosto + PDF "Sexo Sagrado" + acceso completo a PDFs Diálogos GM</li>
           </ul>
@@ -78,7 +78,7 @@ const Estrategias = () => {
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
           <h3 className="text-xl font-bold text-orange-400 mb-2">2️⃣ Grupo Pioneros</h3>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
-            <li>🗓️ Del 14 de septiembre al 13 de noviembre</li>
+            <li>🗓️ Del 14 de Enero al 13 de Marzo de 2026</li>
             <li>💸 Valor: 69 dólares</li>
             <li>🎁 Bonus: mentoría grupal en octubre + PDF "El Dinero y la Magia"</li>
           </ul>
