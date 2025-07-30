@@ -77,7 +77,7 @@ const Estrategias = () => {
 
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
           <h3 className="text-xl font-bold text-orange-400 mb-2">2️⃣ Grupo Pioneros</h3>
-          <ul className="list-disc list-inside text-gray-300 space-y-1">
+          <ul className="list-none text-gray-300 space-y-1">
             <li>🗓️ Del 14 de Noviembre al 13 de Enero de 2026</li>
             <li>💸 Valor: 69 dólares</li>
             <li>🎁 Bonus: mentoría grupal en octubre + PDF "El Dinero y la Magia"</li>
@@ -86,7 +86,7 @@ const Estrategias = () => {
 
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
           <h3 className="text-xl font-bold text-red-400 mb-2">3️⃣ Grupo Final</h3>
-          <ul className="list-disc list-inside text-gray-300 space-y-1">
+          <ul className="list-none text-gray-300 space-y-1">
             <li>🗓️ Del 14 de Enero al 13 de Marzo de 2026</li>
             <li>💸 Valor: 99 dólares</li>
             <li>🎁 Bonus: mentoría grupal en diciembre + PDF "Longevidad con Propósito"</li>
