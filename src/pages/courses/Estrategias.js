@@ -78,7 +78,7 @@ const Estrategias = () => {
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
           <h3 className="text-xl font-bold text-orange-400 mb-2">2️⃣ Grupo Pioneros</h3>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
-            <li>🗓️ Del 14 de Enero al 13 de Marzo de 2026</li>
+            <li>🗓️ Del 14 de Noviembre al 13 de Enero de 2026</li>
             <li>💸 Valor: 69 dólares</li>
             <li>🎁 Bonus: mentoría grupal en octubre + PDF "El Dinero y la Magia"</li>
           </ul>
@@ -87,14 +87,14 @@ const Estrategias = () => {
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
           <h3 className="text-xl font-bold text-red-400 mb-2">3️⃣ Grupo Final</h3>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
-            <li>🗓️ Del 14 de noviembre al 13 de enero de 2026</li>
+            <li>🗓️ Del 14 de Enero al 13 de Marzo de 2026</li>
             <li>💸 Valor: 99 dólares</li>
             <li>🎁 Bonus: mentoría grupal en diciembre + PDF "Longevidad con Propósito"</li>
           </ul>
         </div>
 
         <p className="text-red-400 font-semibold mt-8 mb-4">
-          ⚠️ Cierre definitivo: A partir del 13 de enero de 2026 no habrá más ediciones ni forma de ingresar.
+          ⚠️ Cierre definitivo: A partir del 13 de Marzzo de 2026 no habrá más ediciones ni forma de ingresar.
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">💬 Sobre MIA</h2>
