@@ -94,7 +94,7 @@ const Estrategias = () => {
         </div>
 
         <p className="text-red-400 font-semibold mt-8 mb-4">
-          ⚠️ Cierre definitivo: A partir del 13 de Marzzo de 2026 no habrá más ediciones ni forma de ingresar.
+          ⚠️ Cierre definitivo: A partir del 13 de Marzo de 2026 no habrá más ediciones ni forma de ingresar.
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">💬 Sobre MIA</h2>
