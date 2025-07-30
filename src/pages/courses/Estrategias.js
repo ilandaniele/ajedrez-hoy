@@ -71,7 +71,7 @@ const Estrategias = () => {
           <ul className="list-none text-gray-300 space-y-1">
             <li>🗓️ Del 14 de Septiembre al 13 de Noviembre de 2025</li>
             <li>💸 Valor: 39 dólares</li>
-            <li>🎁 Bonus: mentoría grupal en agosto + PDF "Sexo Sagrado" + acceso completo a PDFs Diálogos GM</li>
+            <li>🎁 Bonus: mentoría grupal en Octubre + PDF "Sexo Sagrado" + acceso completo a PDFs Diálogos GM</li>
           </ul>
         </div>
 
@@ -80,7 +80,7 @@ const Estrategias = () => {
           <ul className="list-none text-gray-300 space-y-1">
             <li>🗓️ Del 14 de Noviembre al 13 de Enero de 2026</li>
             <li>💸 Valor: 69 dólares</li>
-            <li>🎁 Bonus: mentoría grupal en octubre + PDF "El Dinero y la Magia"</li>
+            <li>🎁 Bonus: mentoría grupal en Diciembre + PDF "El Dinero y la Magia"</li>
           </ul>
         </div>
 
@@ -89,7 +89,7 @@ const Estrategias = () => {
           <ul className="list-none text-gray-300 space-y-1">
             <li>🗓️ Del 14 de Enero al 13 de Marzo de 2026</li>
             <li>💸 Valor: 99 dólares</li>
-            <li>🎁 Bonus: mentoría grupal en diciembre + PDF "Longevidad con Propósito"</li>
+            <li>🎁 Bonus: mentoría grupal en Febrero + PDF "Longevidad con Propósito"</li>
           </ul>
         </div>
 
