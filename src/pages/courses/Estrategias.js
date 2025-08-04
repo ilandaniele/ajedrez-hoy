@@ -51,7 +51,7 @@ const Estrategias = () => {
           <li>✔️ Tomar decisiones con estructura, presencia y poder</li>
           <li>✔️ Salir del desorden físico, emocional y financiero</li>
           <li>✔️ Convertir tu energía sexual en dirección creativa</li>
-          <li>✔️ Recuperar tu eje masculino sin miedo al deseo</li>
+          <li>✔️ Recuperar tu eje masculino o femenino sin miedo al deseo</li>
           <li>✔️ Dejar la pornografía, el alcohol u otras adicciones</li>
           <li>✔️ Usar el ajedrez como método de vida</li>
         </ul>
