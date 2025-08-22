@@ -15,6 +15,8 @@ import Calculo from "./pages/courses/Calculo";
 import CAF from "./pages/courses/CAF";
 import CAF5 from "./pages/courses/CAF5";
 import Estrategias from "./pages/courses/Estrategias";
+import ClaseMagistralSlipak from "./pages/courses/ClaseMagistralSlipak";
+import AjedrezPsicologia from "./pages/courses/AjedrezPsicologia";
 import AboutPage from "./pages/AboutUs";
 
 // Widget flotante
@@ -40,6 +42,8 @@ function App() {
         <Route path="/courses/curso-caf" element={<CAF />} />
         <Route path="/courses/caf5-ahm" element={<CAF5 />} />
         <Route path="/courses/estrategias-vida" element={<Estrategias />} />
+        <Route path="/courses/clase-magistral-slipak" element={<ClaseMagistralSlipak />} />
+        <Route path="/courses/ajedrez-psicologia" element={<AjedrezPsicologia />} />
       </Routes>
 
       {/* Botón de WhatsApp flotante */}
