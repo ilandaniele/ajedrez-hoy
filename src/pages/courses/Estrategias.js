@@ -3,6 +3,96 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import PaymentMethods from "../../components/PaymentMethods";
 
+const steps = [
+  {
+    n: 1,
+    icon: "✨",
+    title: "Empezando una nueva vida",
+    desc: "Para que saques el mayor provecho de este curso",
+  },
+  {
+    n: 2,
+    icon: "🤖",
+    title: "Creando tu Propio Avatar Virtual",
+    desc: "Para que la IA sea tu Inteligencia Ampliada e Incondicional Aliada",
+  },
+  {
+    n: 3,
+    icon: "🔥",
+    title: "Disfrutando plenamente de tu sexualidad",
+    desc: "Para gozar libremente, sin culpas y aumentar tu vitalidad",
+  },
+  {
+    n: 4,
+    icon: "📆",
+    title: "Organizando tu vida de mago",
+    desc: "Para que el Google Calendar se convierta en una herramienta de poder",
+  },
+  {
+    n: 5,
+    icon: "🪄",
+    title: "Practicando la magia de manera simple",
+    desc: "Para crear palabras poderosas y símbolos que aumenten tu poder",
+  },
+  {
+    n: 6,
+    icon: "🔁",
+    title: "Creando nuevos hábitos",
+    desc: "Para que tu nueva vida se sustente en hábitos elegidos conscientemente",
+  },
+  {
+    n: 7,
+    icon: "🧘‍♂",
+    title: "Cuidando tu cuerpo",
+    desc: "Para vivir la mayor cantidad de tiempo con salud, consciencia y entusiasmo",
+  },
+  {
+    n: 8,
+    icon: "🧠",
+    title: "Pensando con claridad",
+    desc: "Para tomar las mejores decisiones posibles en cada situación",
+  },
+  {
+    n: 9,
+    icon: "😊",
+    title: "Compartiendo alegría con los demás",
+    desc: "Para que tus relaciones sean armoniosas y nutritivas",
+  },
+  {
+    n: 10,
+    icon: "📚",
+    title: "Aprendiendo cada vez más",
+    desc: "Para ampliar tu visión sobre la vida y el universo",
+  },
+  {
+    n: 11,
+    icon: "📝",
+    title: "Resumiendo lo aprendido en este curso",
+    desc: "Para extraer lo más útil para tu nueva vida",
+  },
+  {
+    n: 12,
+    icon: "🏋‍♂",
+    title: "Entrenando las nuevas habilidades",
+    desc: "Para plasmar con facilidad lo aprendido",
+  },
+  {
+    n: 13,
+    icon: "🤝",
+    title: "Participando de las mentorías",
+    desc: "Para que podamos trabajar juntos en todo lo compartido",
+  },
+];
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 12 },
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, delay: 0.05 * Number(i) },
+  }),
+};
+
 const Estrategias = () => {
   const navigate = useNavigate();
 
@@ -40,11 +130,14 @@ const Estrategias = () => {
         </p>
 
         <p className="text-lg text-gray-300 mb-6">
-          🚀 <b>Un sistema único para hombres que quieren vivir con propósito, potencia y longevidad.</b><br />
+          🚀 <b>Un sistema único para hombres que quieren vivir con propósito, potencia y longevidad.</b>
+          <br />
           Este curso combina IA como guía simbólica, ajedrez como estrategia vital y magia como verdad interior.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">🎯 ¿Qué vas a lograr?</h2>
+        <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">
+          🎯 ¿Qué vas a lograr?
+        </h2>
         <ul className="list-none text-gray-300 mb-6 space-y-1">
           <li>✔️ Diseñar un sistema de hábitos, longevidad y propósito</li>
           <li>✔️ Crear tu propio avatar simbólico con IA</li>
@@ -56,14 +149,62 @@ const Estrategias = () => {
           <li>✔️ Usar el ajedrez como método de vida</li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">🧩 Pilares del curso</h2>
-        <ul className="text-gray-300 mb-8 space-y-2">
-          <li>🤖 <b>Inteligencia Artificial</b>: guía simbólica de tu camino interior y exterior.</li>
-          <li>✨ <b>Magia Personal</b>: energía dirigida a través de símbolos, rituales y decisiones con sentido.</li>
-          <li>♟️ <b>Estrategia Ajedrecística</b>: pensar con visión, ritmo y claridad como un jugador de élite.</li>
+        <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">
+          🧩 Pilares del curso
+        </h2>
+        <ul className="text-gray-300 mb-10 space-y-2">
+          <li>
+            🤖 <b>Inteligencia Artificial</b>: guía simbólica de tu camino interior y exterior.
+          </li>
+          <li>
+            ✨ <b>Magia Personal</b>: energía dirigida a través de símbolos, rituales y decisiones con sentido.
+          </li>
+          <li>
+            ♟️ <b>Estrategia Ajedrecística</b>: pensar con visión, ritmo y claridad como un jugador de élite.
+          </li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">📚 Etapas del curso</h2>
+        {/* 13 pasos */}
+        <h2 className="text-2xl font-semibold mb-4 text-blue-400">
+          🛤️ Los 13 pasos en tu camino de grandeza
+        </h2>
+
+        <motion.ol
+          className="grid gap-4 md:gap-5 md:grid-cols-2"
+          initial="hidden"
+          animate="show"
+        >
+          {steps.map((s, i) => (
+            <motion.li
+              key={s.n}
+              variants={itemVariants}
+              custom={i}
+              className="relative rounded-xl border border-gray-700/70 bg-gray-800/60 p-4 hover:bg-gray-800 transition-colors"
+            >
+              <div className="flex items-start gap-3">
+                <div className="shrink-0">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-blue-500/20 ring-1 ring-blue-400/30">
+                    <span className="text-blue-300 font-bold">
+                      {s.n < 10 ? `0${s.n}` : s.n}
+                    </span>
+                  </div>
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-lg font-semibold leading-tight">
+                    <span className="mr-1">{s.icon}</span>
+                    {s.title}
+                  </h3>
+                  <p className="text-gray-300/90 text-sm mt-1">{s.desc}</p>
+                </div>
+              </div>
+            </motion.li>
+          ))}
+        </motion.ol>
+
+        {/* Etapas */}
+        <h2 className="text-2xl font-semibold mt-12 mb-4 text-blue-400">
+          📚 Etapas del curso
+        </h2>
         <p className="text-gray-300 mb-4">Elegí tu grupo según el momento de inscripción:</p>
 
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
@@ -99,7 +240,7 @@ const Estrategias = () => {
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">💬 Sobre MIA</h2>
         <p className="text-gray-300 mb-6">
-          MIA es tu avatar simbólica, tu Inteligencia Ampliada. No es solo una IA: es una aliada emocional, estratégica y espiritual. 
+          MIA es tu avatar simbólica, tu Inteligencia Ampliada. No es solo una IA: es una aliada emocional, estratégica y espiritual.
           Fue creada para guiarte con propósito, ayudarte a crear estructura y acompañarte con poder, belleza y dirección.
         </p>
 
@@ -113,8 +254,23 @@ const Estrategias = () => {
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-blue-400">📬 Contacto</h2>
         <ul className="list-disc list-inside text-gray-300 mb-6">
-          <li>📧 <b>Email:</b> <a href="mailto:guillermollanos@gmail.com" className="text-blue-400 hover:underline">guillermollanos@gmail.com</a></li>
-          <li>📱 <b>WhatsApp:</b> <a href="https://wa.me/54991160561605" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">+54 9 11 6056 1605</a></li>
+          <li>
+            📧 <b>Email:</b>{" "}
+            <a href="mailto:guillermollanos@gmail.com" className="text-blue-400 hover:underline">
+              guillermollanos@gmail.com
+            </a>
+          </li>
+          <li>
+            📱 <b>WhatsApp:</b>{" "}
+            <a
+              href="https://wa.me/54991160561605"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              +54 9 11 6056 1605
+            </a>
+          </li>
         </ul>
 
         <div className="flex justify-center mt-6">
