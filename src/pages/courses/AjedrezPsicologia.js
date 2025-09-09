@@ -121,7 +121,6 @@ const AjedrezPsicologia = () => {
         <ul className="list-disc list-inside text-gray-300 mb-6">
           <li>Cada <b>nivel</b> dura <b>8 semanas</b>.</li>
           <li>Contenidos en <b>PGN</b> y <b>PDF</b> para estudiar a tu ritmo desde cualquier dispositivo.</li>
-          <li>Modalidad grupal (consultar fechas y horarios vigentes).</li>
         </ul>
 
         {/* Medios de pago */}
