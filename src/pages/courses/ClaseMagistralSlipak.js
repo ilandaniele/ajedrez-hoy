@@ -38,7 +38,7 @@ const ClaseMagistralSlipak = () => {
         <p className="text-center text-gray-300 mb-8">
           <span className="block">Sábado <b>20 de septiembre</b> — <b>12:15</b> a <b>13:45</b> (90 minutos)</span>
           <span className="block">Tema: <b>Análisis en ajedrez, cálculo, intuición y conceptos</b></span>
-          <span className="block">Valor: <b>$ 10.000</b></span>
+          <span className="block">Valor: <b>$ 10.000 ARS / 10 USD</b></span>
         </p>
 
         {/* Descripción breve */}

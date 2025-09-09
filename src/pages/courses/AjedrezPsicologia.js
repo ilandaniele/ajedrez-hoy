@@ -42,9 +42,33 @@ const AjedrezPsicologia = () => {
           <span className="block">
             Profesor: <strong>Lic. Santiago Mellano</strong> (Psicólogo, docente de ajedrez) — integrante del equipo <strong>Ajedrez HOY</strong>.
           </span>
-          <span className="block">Valor del curso completo: <strong>$ 40.000</strong></span>
-          <span className="block">Estructura y formato: <strong>igual al CAF</strong> (con <strong>4 niveles</strong> de profundidad por tema).</span>
         </p>
+
+        {/* BLOQUE DE PRECIO (promo 50% OFF) */}
+        <div className="mx-auto mb-10 max-w-xl rounded-2xl border border-white/10 bg-gray-800/60 p-6 shadow-lg">
+          <div className="flex flex-col items-center text-center gap-3">
+            <div className="inline-flex items-center gap-2">
+              <span className="text-gray-400 line-through text-xl">ARS 80.000</span>
+              <span className="rounded-full bg-green-500/15 text-green-400 text-xs font-semibold px-3 py-1 border border-green-500/30">
+                50% OFF
+              </span>
+            </div>
+
+            <div>
+              <div className="text-4xl font-extrabold tracking-tight">
+                ARS <span className="tabular-nums">40.000</span>
+              </div>
+              <div className="text-sm text-gray-300 mt-1">
+                ó <span className="font-semibold">USD 40</span> (curso completo)
+              </div>
+            </div>
+
+            {/* mini-leyenda opcional */}
+            <div className="text-xs text-gray-400 mt-2">
+              Precio final promocional. Cupos limitados.
+            </div>
+          </div>
+        </div>
 
         {/* Descripción breve */}
         <p className="text-lg text-gray-300 mb-6">
@@ -86,7 +110,12 @@ const AjedrezPsicologia = () => {
           <li><b>Materiales</b>: fichas de trabajo, ejercicios y pautas de entrenamiento mental.</li>
           <li><b>Modalidad</b>: grupal (consultar por fechas/horarios vigentes).</li>
           <li><b>Cupo limitado</b>: se confirma con el pago.</li>
-          <li><b>Valor</b>: $ 40.000 (curso completo).</li>
+          <li>
+            <b>Valor</b>: <span className="line-through text-gray-400">ARS 80.000</span>{" "}
+            <span className="text-green-400 font-semibold">ARS 40.000</span>{" "}
+            / <span className="font-semibold">USD 40</span> —{" "}
+            <span className="text-green-400 font-semibold">50% OFF</span>.
+          </li>
         </ul>
 
         {/* Medios de pago */}
