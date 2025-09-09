@@ -38,8 +38,22 @@ const ClaseMagistralSlipak = () => {
         <p className="text-center text-gray-300 mb-8">
           <span className="block">Sábado <b>20 de septiembre</b> — <b>12:15</b> a <b>13:45</b> (90 minutos)</span>
           <span className="block">Tema: <b>Análisis en ajedrez, cálculo, intuición y conceptos</b></span>
-          <span className="block">Valor: <b>$ 10.000 ARS / 10 USD</b></span>
         </p>
+
+        {/* BLOQUE DE PRECIO */}
+        <div className="mx-auto mb-10 max-w-xl rounded-2xl border border-white/10 bg-gray-800/60 p-6 shadow-lg">
+          <div className="flex flex-col items-center text-center gap-2">
+            <div className="text-4xl font-extrabold tracking-tight">
+              ARS <span className="tabular-nums">10.000</span>
+            </div>
+            <div className="text-sm text-gray-300">
+              ó <span className="font-semibold">USD 10</span>
+            </div>
+            <div className="text-xs text-gray-400 mt-1">
+              Precio final. Cupos limitados.
+            </div>
+          </div>
+        </div>
 
         {/* Descripción breve */}
         <p className="text-lg text-gray-300 mb-6">
@@ -90,7 +104,6 @@ const ClaseMagistralSlipak = () => {
           <li><b>Modalidad:</b> Grupal.</li>
           <li><b>Fecha y hora:</b> Sábado 20 de septiembre — 12:15 a 13:45.</li>
           <li><b>Duración:</b> 90 minutos.</li>
-          <li><b>Valor:</b> $ 10.000.</li>
           <li><b>Cupo limitado:</b> se reserva lugar con el pago.</li>
         </ul>
 
@@ -141,7 +154,7 @@ const ClaseMagistralSlipak = () => {
             rel="noopener noreferrer"
             className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-bold transition"
           >
-            ✅ Reservar mi lugar por WhatsApp
+          ✅ Reservar mi lugar por WhatsApp
           </a>
         </div>
       </div>
