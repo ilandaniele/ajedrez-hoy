@@ -63,7 +63,6 @@ const AjedrezPsicologia = () => {
               </div>
             </div>
 
-            {/* mini-leyenda opcional */}
             <div className="text-xs text-gray-400 mt-2">
               Precio final promocional. Cupos limitados.
             </div>
@@ -108,7 +107,6 @@ const AjedrezPsicologia = () => {
         <ul className="list-disc list-inside text-gray-300 mb-6">
           <li><b>Formato CAF</b>: progresión por <b>niveles 1 a 4</b> en cada tema.</li>
           <li><b>Materiales</b>: fichas de trabajo, ejercicios y pautas de entrenamiento mental.</li>
-          <li><b>Modalidad</b>: grupal (consultar por fechas/horarios vigentes).</li>
           <li><b>Cupo limitado</b>: se confirma con el pago.</li>
           <li>
             <b>Valor</b>: <span className="line-through text-gray-400">ARS 80.000</span>{" "}
@@ -116,6 +114,14 @@ const AjedrezPsicologia = () => {
             / <span className="font-semibold">USD 40</span> —{" "}
             <span className="text-green-400 font-semibold">50% OFF</span>.
           </li>
+        </ul>
+
+        {/* Duración y modalidad */}
+        <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">🗓 Duración y modalidad</h2>
+        <ul className="list-disc list-inside text-gray-300 mb-6">
+          <li>Cada <b>nivel</b> dura <b>8 semanas</b>.</li>
+          <li>Contenidos en <b>PGN</b> y <b>PDF</b> para estudiar a tu ritmo desde cualquier dispositivo.</li>
+          <li>Modalidad grupal (consultar fechas y horarios vigentes).</li>
         </ul>
 
         {/* Medios de pago */}
