@@ -32,13 +32,9 @@ const ClaseMagistralSlipak = () => {
         </button>
 
         {/* Título */}
-        <h1 className="text-4xl font-bold text-center mb-2">
+        <h1 className="text-4xl font-bold text-center mb-8">
           Clases Magistrales del GM Sergio Slipak (Grupales)
         </h1>
-        <p className="text-center text-gray-300 mb-8">
-          <span className="block">Sábado <b>20 de septiembre</b> — <b>12:15</b> a <b>13:45</b> (90 minutos)</span>
-          <span className="block">Tema: <b>Análisis en ajedrez, cálculo, intuición y conceptos</b></span>
-        </p>
 
         {/* BLOQUE DE PRECIO */}
         <div className="mx-auto mb-10 max-w-xl rounded-2xl border border-white/10 bg-gray-800/60 p-6 shadow-lg">
@@ -57,10 +53,9 @@ const ClaseMagistralSlipak = () => {
 
         {/* Descripción breve */}
         <p className="text-lg text-gray-300 mb-6">
-          Una sesión intensiva para fortalecer tu proceso de pensamiento durante la partida:
-          cómo <b>calcular con precisión</b>, cuándo confiar en la <b>intuición</b> y cómo articular
-          ambos con <b>conceptos posicionales</b> claros. Ideal para jugadores de clubes,
-          federados y entrenadores que desean un marco práctico y moderno.
+          Clases grupales dictadas por el Gran Maestro Internacional Sergio Slipak. Cada sesión aborda
+          temas de alto nivel orientados a mejorar tu juego, con análisis prácticos y participación activa del grupo.
+          Ideal para jugadores de clubes, federados y entrenadores.
         </p>
 
         {/* Sobre el ponente */}
@@ -74,35 +69,12 @@ const ClaseMagistralSlipak = () => {
           <li>Décadas formando talentos y referentes del ajedrez argentino y latinoamericano.</li>
         </ul>
 
-        {/* Lo que te vas a llevar */}
-        <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
-          🎯 Lo que te vas a llevar
-        </h2>
-        <ul className="list-disc list-inside text-gray-300 mb-6">
-          <li>Un método claro para <b>ordenar el cálculo</b> y reducir errores no forzados.</li>
-          <li>Claves para usar la <b>intuición</b> sin perder rigor.</li>
-          <li><b>Patrones y conceptos</b> para evaluar posiciones críticas.</li>
-          <li>Ejercicios tipo para seguir entrenando después de la clase.</li>
-        </ul>
-
-        {/* Agenda */}
-        <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
-          🗂️ Agenda resumida (90’)
-        </h2>
-        <ol className="list-decimal list-inside text-gray-300 mb-6">
-          <li>Marco de trabajo: cálculo, intuición y conceptos (cuándo y cómo).</li>
-          <li>Ejemplos prácticos guiados por el GM.</li>
-          <li>Ejercicios interactivos con participación del grupo.</li>
-          <li>Conclusiones y recomendaciones de entrenamiento.</li>
-        </ol>
-
         {/* Logística */}
         <h2 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">
           🧩 Logística e inscripción
         </h2>
         <ul className="list-disc list-inside text-gray-300 mb-6">
           <li><b>Modalidad:</b> Grupal.</li>
-          <li><b>Fecha y hora:</b> Sábado 20 de septiembre — 12:15 a 13:45.</li>
           <li><b>Duración:</b> 90 minutos.</li>
           <li><b>Cupo limitado:</b> se reserva lugar con el pago.</li>
         </ul>
