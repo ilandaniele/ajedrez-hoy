@@ -42,10 +42,10 @@ const Calculo = () => {
         <div className="mx-auto mb-10 max-w-xl rounded-2xl border border-white/10 bg-gray-800/60 p-6 shadow-lg">
           <div className="flex flex-col items-center text-center gap-2">
             <div className="text-4xl font-extrabold tracking-tight">
-              ARS <span className="tabular-nums">10.000</span>
+              ARS <span className="tabular-nums">13.000</span>
             </div>
             <div className="text-sm text-gray-300">
-              ó <span className="font-semibold">USD 10</span> (por clase)
+              ó <span className="font-semibold">USD 13</span> (por clase)
             </div>
             <div className="text-xs text-gray-400 mt-1">
               Valor por sesión. Cupos muy limitados.
