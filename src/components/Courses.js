@@ -69,9 +69,9 @@ const Courses = () => {
     },
     {
       id: "clase-magistral-slipak",
-      titulo: "Clase Magistral del GM Sergio Slipak (Grupal)",
+      titulo: "Clases Magistrales GM Sergio Slipak (grupales)",
       descripcion:
-        "Sábado 20 de septiembre de 12:15 a 13:45.\nTítulo: <strong>Análisis en ajedrez, cálculo, intuición y conceptos</strong>.\nUna sesión intensiva para fortalecer tu proceso de pensamiento durante la partida.",
+        "Clases magistrales grupales dictadas por el <strong>Gran Maestro Internacional Sergio Slipak</strong>. Sesiones de alto nivel a lo largo del año.",
       ruta: "/courses/clase-magistral-slipak",
     },
     {
